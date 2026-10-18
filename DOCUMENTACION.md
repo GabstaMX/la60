@@ -109,7 +109,7 @@ Nada de lo que aparece está inventado.
 | Origen, variedades, notas de cata, los 4 blends | `Dossier_Cafe_La60.pdf` |
 | Precios del café (150 / 280 / 560 · 190 el del mes) | dossier, pág. 9 y 10 |
 | Precios de obra y objetos | `ProductList La60 Nov2025.xlsx`, categorías *Art Collage*, *Ceramics* y *Productos cafetería* |
-| Cuota del taller ($100 · $50 estudiante) | misma lista, *Cuota collage* |
+| Cuota del taller ($350 · $200 estudiante) | misma lista, *Cuota collage* |
 | Paleta, tipografías, tono de voz, regla del tachado | `01_Identidad_y_Marca_v2.md` |
 | Fotos del espacio | las 5 del sistema visual v3 |
 | Recortes que flotan | `manteleta.jpg` — el pliego recortable de LA 60 |
@@ -351,7 +351,7 @@ aparecen los campos de eso.
 
 | Intención | Qué cobra | Campos |
 |---|---|---|
-| Mesa de collage | $100 · $50 con credencial | día, hora, personas, estudiantes |
+| Mesa de collage | $350 · $200 con credencial | día, hora, personas, estudiantes |
 | Mesa en la cafetería | sin costo | día, hora, personas |
 | Apartar café | $150 – $560 · del mes $190 | blend, presentación, cantidad, molienda, entrega |
 | Apartar una pieza | $200 – $6,000 | pieza, entrega |

@@ -91,7 +91,7 @@ unidad en inventario, y cuando se vende ya no vuelve.
 
 ## 5 · Taller de collage
 
-Cuota por persona: 100. Precio de estudiante: 50. Materiales incluidos.
+Cuota por persona: 350. Precio de estudiante: 200. Materiales incluidos.
 
 ## 6 · Reglas que no se rompen
 
