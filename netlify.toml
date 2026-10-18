@@ -1,0 +1,14 @@
+# Sitio estático: no hay nada que compilar, se publica la raíz tal cual.
+[build]
+  publish = "."
+  command = ""
+
+[[redirects]]
+  from = "/*"
+  status = 404
+  to = "/404.html"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

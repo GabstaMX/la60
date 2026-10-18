@@ -1,0 +1,11 @@
+# Basura de macOS
+.DS_Store
+._*
+
+# Paquetes de un solo archivo: se generan con herramientas/empaquetar.py
+# y pesan 12 MB cada uno porque llevan las imágenes incrustadas en base64.
+# No tiene sentido versionarlos: se regeneran cuando se necesitan.
+*-una-pieza.html
+
+# Configuración local del editor
+.claude/

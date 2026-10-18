@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LA 60 · Café Atelier — Mérida, Yucatán</title>
+<meta name="description" content="Café orgánico de Chiapas tostado en Mérida, obra de Tatifer4 en venta y un atelier de collage abierto. Calle 60 № 393, Centro.">
+<meta name="theme-color" content="#008D89">
+<meta property="og:title" content="LA 60 · Café Atelier">
+<meta property="og:description" content="Café, comunidad, color y collage. Calle 60 № 393, Centro, Mérida.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://la60cafeatelier.com/assets/img/og-index.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Las cuatro bolsas de café de LA 60 en fila">
+<meta property="og:url" content="https://la60cafeatelier.com/">
+<meta property="og:site_name" content="LA 60 · Café Atelier">
+<meta property="og:locale" content="es_MX">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://la60cafeatelier.com/">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="favicon-512.png" type="image/png" sizes="512x512">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="preload" href="assets/fonts/lore-bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/warungkopi-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/la60-web.css">
+</head>
+<body>
+
+<a class="salta" href="#origen">Saltar al contenido</a>
+
+<!-- ============================================================
+     NAVEGACIÓN
+     ============================================================ -->
+<nav class="nav" aria-label="Principal">
+  <div class="nav__grupo">
+    <a class="pill pill--marca" href="#inicio">La 60 · Café Atelier · 393</a>
+  </div>
+  <div class="nav__grupo nav__links">
+    <a class="pill" href="#origen">El café</a>
+    <a class="pill" href="#blends">Los blends</a>
+    <a class="pill" href="#tienda">Llévatelo</a>
+    <a class="pill" href="obra.html">Galería</a>
+    <a class="pill" href="#espacio">El espacio</a>
+  </div>
+  <div class="nav__grupo">
+    <a class="pill pill--acento" href="reservas.html">Reservar</a>
+  </div>
+</nav>
+<a class="tab393" href="#visita" aria-label="Calle 60 número 393, Centro, Mérida">393</a>
+
+<!-- ============================================================
+     HERO · la composición flotante
+     ============================================================ -->
+<header class="hero escena" id="inicio" data-raton="26">
+  <div class="hero__fondo"></div>
+  <div class="hero__cuadricula trama"></div>
+
+  <!-- Los objetos flotantes de la portada. Recortes de la manteleta de
+       LA 60, a escalas muy distintas para que la composición tenga fondo.
+       Sus posiciones viven en el CSS (.h-*) porque en móvil se reparten
+       distinto: la franja central queda libre para el título. -->
+  <div class="flota solo-md h-cafeto-a" data-scroll="60">
+    <div class="flota__i"><img src="assets/img/cafeto-kinder.webp" alt="" width="720" height="1080" loading="eager"></div>
+  </div>
+  <div class="flota h-personaje" data-scroll="150">
+    <div class="flota__i"><img src="assets/img/personaje.webp" alt="Ilustración de la anfitriona de LA 60 con su taza de café" width="820" height="1192" loading="eager" fetchpriority="high"></div>
+  </div>
+
+  <div class="flota flota--suave h-bolsa" data-scroll="190">
+    <div class="flota__i"><img src="assets/img/bolsas/atelier.webp"
+         alt="Bolsa de 250 g de Atelier, con la etiqueta de collage de Tatifer4" loading="eager"></div>
+  </div>
+
+  <div class="flota h-r1" data-scroll="230">
+    <div class="flota__i"><img src="assets/img/recortes/patin.webp" alt="Patín de ruedas recortado" loading="eager"></div>
+  </div>
+  <div class="flota h-r2" data-scroll="210">
+    <div class="flota__i"><img src="assets/img/recortes/perro.webp" alt="Perro recortado" loading="eager"></div>
+  </div>
+  <div class="flota solo-md h-r3" data-scroll="245">
+    <div class="flota__i"><img src="assets/img/recortes/elefante.webp" alt="Elefante haciendo equilibrio sobre una pelota" loading="eager"></div>
+  </div>
+  <div class="flota solo-md h-r4" data-scroll="255">
+    <div class="flota__i"><img src="assets/img/recortes/muneca.webp" alt="Muñeca de porcelana recortada" loading="eager"></div>
+  </div>
+  <div class="flota solo-md h-r5" data-scroll="235">
+    <div class="flota__i"><img src="assets/img/recortes/flor-negra.webp" alt="Flor negra recortada" loading="eager"></div>
+  </div>
+  <div class="flota solo-md h-r6" data-scroll="200">
+    <div class="flota__i"><img src="assets/img/recortes/libelula.webp" alt="Libélula recortada" loading="eager"></div>
+  </div>
+  <div class="flota solo-md h-r7" data-scroll="215">
+    <div class="flota__i"><img src="assets/img/recortes/rosa.webp" alt="Rosa roja recortada" loading="eager"></div>
+  </div>
+  <div class="flota h-r8" data-scroll="265">
+    <div class="flota__i"><img src="assets/img/recortes/corazon.webp" alt="Corazón rojo recortado" loading="eager"></div>
+  </div>
+  <div class="flota solo-md h-r9" data-scroll="240">
+    <div class="flota__i"><img src="assets/img/recortes/caracol.webp" alt="Caracol recortado" loading="eager"></div>
+  </div>
+  <div class="flota solo-md h-r10" data-scroll="225">
+    <div class="flota__i"><img src="assets/img/recortes/reloj.webp" alt="Reloj con un signo de interrogación" loading="eager"></div>
+  </div>
+
+  <div class="wrap hero__centro">
+    <h1 class="hero__logo">
+      <img src="assets/img/logo-tinta.webp"
+           alt="LA 60 · Café Atelier · 393"
+           width="661" height="900" fetchpriority="high">
+    </h1>
+    <p class="hero__sub">
+      <span>Calle 60 № 393</span><i class="hero__punto"></i>
+      <span>Centro · Mérida</span><i class="hero__punto"></i>
+      <span>Café · Galería · Atelier</span>
+    </p>
+    <div class="hero__cta">
+      <a class="btn btn--rojo" href="reservas.html"><span>Reservar</span></a>
+      <a class="btn btn--linea" href="obra.html"><span>Ver la obra</span></a>
+    </div>
+  </div>
+
+  <div class="scrollcue" aria-hidden="true">Baja<i></i></div>
+</header>
+
+<!-- ============================================================
+     MARQUESINA
+     ============================================================ -->
+<div class="marq" aria-hidden="true">
+  <div class="marq__pista">
+    <div class="marq__grupo">
+      <span class="marq__item">Café</span><i class="marq__punto"></i>
+      <span class="marq__item">Comunidad</span><i class="marq__punto"></i>
+      <span class="marq__item">Color</span><i class="marq__punto"></i>
+      <span class="marq__item">Collage</span><i class="marq__punto"></i>
+    </div>
+    <div class="marq__grupo">
+      <span class="marq__item">Café</span><i class="marq__punto"></i>
+      <span class="marq__item">Comunidad</span><i class="marq__punto"></i>
+      <span class="marq__item">Color</span><i class="marq__punto"></i>
+      <span class="marq__item">Collage</span><i class="marq__punto"></i>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     ORIGEN
+     ============================================================ -->
+<section class="sec plano plano--kinder plano--corte escena" id="origen" data-raton="14">
+  <div class="flota solo-md" data-scroll="120" style="--x:82%;--y:-6%;--w:min(26vw,320px);--depth:.6;--rot:14deg;--dur:21s;--amp:14px;--z:1;opacity:.55">
+    <div class="flota__i"><img src="assets/img/cafeto-mostaza.webp" alt="" width="720" height="1080" loading="lazy"></div>
+  </div>
+  <div class="flota solo-md" data-scroll="170" style="--x:2%;--y:63%;--w:clamp(84px,9vw,140px);--depth:1.8;--rot:-8deg;--dur:12s;--delay:-3s;--amp:18px;--z:1">
+    <div class="flota__i"><img src="assets/img/recortes/mariposa-amarilla.webp" alt="Mariposa amarilla recortada" loading="lazy"></div>
+  </div>
+
+  <div class="wrap">
+    <p class="eyebrow rev">01 — El origen · Soconusco, Chiapas</p>
+    <h2 class="t-xl rev" data-d="1" style="margin:1.4rem 0 1.6rem;max-width:16ch">Detrás de cada taza hay un territorio</h2>
+    <p class="lead rev" data-d="2" style="max-width:62ch">
+      Nuestro café viene de la zona montañosa del Soconusco, donde el río San Francisco nutre a las
+      comunidades indígenas cafetaleras asentadas en las faldas del volcán Tacaná. Enraizados en
+      Tapachula, Unión Juárez y Cacahoatán, trabajamos mediante comercio justo con cooperativas de
+      productores indígenas, guardianes de esta tierra.
+    </p>
+
+    <div class="cifras" style="margin-top:clamp(3rem,6vw,5rem)">
+      <div class="cifra rev" data-d="1">
+        <p class="cifra__n">1 400<em>m</em></p>
+        <p>Cultivado por encima de los 1 400 metros, bajo sombra natural. A esa altura la maduración
+           es lenta y el grano concentra azúcares y acidez complejos.</p>
+      </div>
+      <div class="cifra rev" data-d="2">
+        <p class="cifra__n">84<em>+</em></p>
+        <p>Solo las cosechas con puntuación SCAA superior a 84 son elevadas a la categoría de blend.
+           El resto no lleva nuestro nombre.</p>
+      </div>
+      <div class="cifra rev" data-d="3">
+        <p class="cifra__n">100<em>%</em></p>
+        <p>Arábica de altura mexicano, orgánico certificado. Comercio justo con cooperativas de
+           productores indígenas de Chiapas.</p>
+      </div>
+    </div>
+
+    <p class="nota rev" data-d="4" style="margin-top:clamp(2.6rem,5vw,4rem);max-width:34ch;opacity:.9">
+      El café no es solo bebida: es lenguaje sensorial que acompaña la pausa.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     VARIEDADES
+     ============================================================ -->
+<section class="sec" id="variedades">
+  <div class="wrap">
+    <p class="eyebrow rev">02 — Las variedades · un sistema de equilibrio</p>
+    <h2 class="t-xl rev" data-d="1" style="margin:1.4rem 0 1.2rem;max-width:15ch">Cinco variedades, una conversación</h2>
+    <p class="lead mut rev" data-d="2" style="max-width:58ch">
+      Nuestro café no se construye desde una sola nota dominante, sino desde la interacción entre
+      variedades. Cada una aporta una dimensión distinta, y cada blend es una interpretación de ese
+      equilibrio.
+    </p>
+  </div>
+
+  <div class="tira rev" data-d="3">
+    <article class="var" style="--tono:#A7D6CE;--tono-txt:#006D6A">
+      <span class="var__n">01</span>
+      <h3>Typica</h3><em class="var__lat">Coffea arabica var. typica</em>
+      <p>Una de las más antiguas y base genética de muchas otras. Sensación limpia y refinada.</p>
+      <span class="var__tag">Floral y ligero</span>
+    </article>
+    <article class="var" style="--tono:#C89B2E;--tono-txt:#FCF7F2">
+      <span class="var__n">02</span>
+      <h3>Bourbon</h3><em class="var__lat">Coffea arabica var. bourbon</em>
+      <p>Reconocida por su alta calidad en taza. Notas a caramelo y nuez, cuerpo sedoso.</p>
+      <span class="var__tag">Dulce y estructural</span>
+    </article>
+    <article class="var" style="--tono:#E88FA8;--tono-txt:#3A3A3A">
+      <span class="var__n">03</span>
+      <h3>Caturra</h3><em class="var__lat">Coffea arabica var. caturra</em>
+      <p>Mutación natural del Bourbon. Matices cítricos que aportan frescura y balance.</p>
+      <span class="var__tag">Fresco y ácido</span>
+    </article>
+    <article class="var" style="--tono:#008D89;--tono-txt:#FCF7F2">
+      <span class="var__n">04</span>
+      <h3>Catuái</h3><em class="var__lat">Coffea arabica var. catuaí</em>
+      <p>Híbrido de Mundo Novo y Caturra. Cuerpo medio y taza limpia y consistente.</p>
+      <span class="var__tag">Dulce y equilibrado</span>
+    </article>
+    <article class="var" style="--tono:#C2185B;--tono-txt:#FCF7F2">
+      <span class="var__n">05</span>
+      <h3>Maragogipe</h3><em class="var__lat">Coffea arabica var. maragogipe</em>
+      <p>Mutación de Typica, de grano grande. Complejidad aromática y final largo.</p>
+      <span class="var__tag">Profundo y complejo</span>
+    </article>
+  </div>
+
+  <div class="wrap">
+    <div class="recuadro rev">
+      <span class="recuadro__sello">Perfil de la casa</span>
+      <p class="t-m" style="text-transform:none;font-family:var(--font-cuerpo);font-weight:300;line-height:1.35">
+        Notas principales · <b>dulce · chocolate · nuez</b>.<br>
+        Matices · florales, cítricos, frutales suaves.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     BLENDS · volúmenes que se apilan
+     ============================================================ -->
+<div class="pila" id="blends">
+
+  <section class="blend escena" data-raton="16" style="--bg:#008D89;--tx:#FCF7F2">
+    <span class="blend__num" aria-hidden="true">01</span>
+    <div class="wrap blend__rejilla">
+      <div>
+        <p class="eyebrow">Premium · tueste medio</p>
+        <h2 class="t-xl">Atelier</h2>
+        <p class="blend__claim">nuestra mejor mezcla</p>
+        <p class="blend__desc lead">
+          Excelente retrogusto a chocolate y un sabor completo: aroma, cuerpo y acidez balanceada.
+          Es el único blend que incorpora granos de Maragogipe, la variedad que le da profundidad y
+          ese final largo que se queda.
+        </p>
+        <dl class="ficha">
+          <div><dt>Tueste</dt><dd>100 % medio</dd></div>
+          <div><dt>Carácter</dt><dd>Balanceado</dd></div>
+          <div><dt>Variedades</dt><dd>Typica · Bourbon · Caturra · Catuái · Maragogipe</dd></div>
+          <div><dt>Para</dt><dd>Espresso y métodos manuales</dd></div>
+        </dl>
+        <div class="blend__notas">
+          <p class="eyebrow">La nota, con calma</p>
+          <ul>
+            <li><b>Chocolate oscuro</b> — el tueste medio se detiene justo antes de que el amargor
+              tape el origen. Lo que queda en el retrogusto es cacao maduro, no dulce de chocolate.
+              El Maragogipe pone el cuerpo redondo que hace que esa nota se quede en la boca.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="blend__frontal">
+        <div class="flota" data-scroll="70" style="--x:50%;--y:50%;--w:min(92%,520px);--depth:1.3;--rot:-3deg;--dur:11s;--amp:16px;transform-origin:center;margin:-1px 0 0 -1px;translate:-50% -50%">
+          <div class="flota__i frontal" data-frontal="atelier"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blend escena" data-raton="16" style="--bg:#3A3A3A;--tx:#FCF7F2">
+    <span class="blend__num" aria-hidden="true">02</span>
+    <div class="wrap blend__rejilla">
+      <div>
+        <p class="eyebrow">Espresso · 75 % medio + 25 % oscuro</p>
+        <h2 class="t-xl">Col-Coll</h2>
+        <p class="blend__claim">para quien lo toma negro</p>
+        <p class="blend__desc lead">
+          Sabor más fuerte y sensación más oscura. Está pensado para que incluso el café filtrado
+          sepa parecido a un espresso real: la proporción de tueste oscuro le da cuerpo sin perder
+          la estructura del medio.
+        </p>
+        <dl class="ficha">
+          <div><dt>Tueste</dt><dd>75 % medio + 25 % oscuro</dd></div>
+          <div><dt>Carácter</dt><dd>Intenso y profundo</dd></div>
+          <div><dt>Variedades</dt><dd>Typica · Bourbon · Caturra · Catuái</dd></div>
+          <div><dt>Para</dt><dd>Espresso y café negro</dd></div>
+        </dl>
+        <div class="blend__notas">
+          <p class="eyebrow">Las notas, con calma</p>
+          <ul>
+            <li><b>Chocolate amargo</b> — ese 25 % de tueste oscuro empuja el cacao hacia el lado
+              seco, sin dulzor. Es lo que le da el filo.</li>
+            <li><b>Melaza</b> — el azúcar del grano llevado un punto más allá del caramelo: denso,
+              oscuro, con esa untuosidad que se queda.</li>
+            <li><b>Especiado</b> — un matiz cálido, cercano a la canela o el clavo.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="blend__frontal">
+        <div class="flota" data-scroll="70" style="--x:50%;--y:50%;--w:min(92%,520px);--depth:1.3;--rot:3deg;--dur:12s;--delay:-3s;--amp:16px;translate:-50% -50%">
+          <div class="flota__i frontal" data-frontal="colcoll"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blend escena" data-raton="16" style="--bg:#E31E24;--tx:#FCF7F2">
+    <span class="blend__num" aria-hidden="true">03</span>
+    <div class="wrap blend__rejilla">
+      <div>
+        <p class="eyebrow">Tueste oscuro · French</p>
+        <h2 class="t-xl">Darkneo</h2>
+        <p class="blend__claim">hasta el segundo crack</p>
+        <p class="blend__desc lead">
+          El sabor más fuerte que sabemos extraer. Tostamos hasta el segundo crack granos
+          perfectamente seleccionados, y ahí aparece otra cosa: cacao, caramelo y un fondo a madera.
+          No es para todos, y eso nos gusta.
+        </p>
+        <dl class="ficha">
+          <div><dt>Tueste</dt><dd>French · 100 % oscuro</dd></div>
+          <div><dt>Carácter</dt><dd>Intenso</dd></div>
+          <div><dt>Variedades</dt><dd>Typica · Bourbon · Caturra · Catuái</dd></div>
+          <div><dt>Para</dt><dd>Perfiles fuertes</dd></div>
+        </dl>
+        <div class="blend__notas">
+          <p class="eyebrow">Las notas, con calma</p>
+          <ul>
+            <li><b>Cacao</b> — seco y amargo, más cerca del grano de cacao mordido que del chocolate
+              de mesa.</li>
+            <li><b>Caramelo</b> — el azúcar justo en el límite antes de quemarse. En el tueste
+              oscuro esa frontera es finísima.</li>
+            <li><b>Madera</b> — aparece con el segundo crack. Es la firma del French roast y lo que
+              separa a Darkneo de los otros tres.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="blend__frontal">
+        <div class="flota" data-scroll="70" style="--x:50%;--y:50%;--w:min(92%,520px);--depth:1.3;--rot:-4deg;--dur:10.5s;--delay:-5s;--amp:16px;translate:-50% -50%">
+          <div class="flota__i frontal" data-frontal="darkneo"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blend escena" data-raton="16" style="--bg:#A7D6CE;--tx:#006D6A">
+    <span class="blend__num" aria-hidden="true">04</span>
+    <div class="wrap blend__rejilla">
+      <div>
+        <p class="eyebrow">Descafeinado · proceso al agua · tueste medio</p>
+        <h2 class="t-xl">Sereno</h2>
+        <p class="blend__claim">la misma pausa, a cualquier hora</p>
+        <p class="blend__desc lead">
+          Descafeinado por proceso al agua, sin disolventes químicos: el método que respeta el perfil
+          del grano en lugar de aplanarlo. Mismo origen, mismo cuidado, misma taza — solo que sin
+          nada que te quite el sueño.
+        </p>
+        <dl class="ficha">
+          <div><dt>Tueste</dt><dd>Medio</dd></div>
+          <div><dt>Proceso</dt><dd>Descafeinado al agua (MWP)</dd></div>
+          <div><dt>Variedades</dt><dd>Typica · Bourbon · Caturra · Catuái</dd></div>
+          <div><dt>Para</dt><dd>Cualquier método · tarde y noche</dd></div>
+        </dl>
+        <div class="blend__notas">
+          <p class="eyebrow">Las notas, con calma</p>
+          <ul>
+            <li><b>Piloncillo</b> — dulzor de caña sin refinar. Es la primera nota que se pierde en
+              los descafeinados con disolventes, y la razón por la que este va por proceso al agua.</li>
+            <li><b>Manzana roja</b> — acidez málica: redonda y jugosa, no cítrica. Viene del origen,
+              no del tueste.</li>
+            <li><b>Almendra tostada</b> — el fondo de nuez que aporta el Bourbon.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="blend__frontal">
+        <div class="flota" data-scroll="70" style="--x:50%;--y:50%;--w:min(92%,520px);--depth:1.3;--rot:4deg;--dur:13s;--delay:-2s;--amp:16px;translate:-50% -50%">
+          <div class="flota__i frontal" data-frontal="sereno"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================================================
+     CÓMO SE LEEN LAS NOTAS
+     ============================================================ -->
+<section class="sec plano plano--warm" id="notas">
+  <div class="wrap">
+    <p class="eyebrow rev">Cómo se leen las notas</p>
+    <h2 class="t-xl rev" data-d="1" style="margin:1.4rem 0 1.4rem;max-width:16ch">Nadie le pone chocolate al café</h2>
+    <p class="lead rev" data-d="2" style="max-width:64ch;margin-bottom:clamp(2.6rem,5vw,4rem)">
+      Cuando en una etiqueta dice «notas: cacao, caramelo», no es que lleve cacao ni caramelo. Son
+      los sabores que tu paladar reconoce en compuestos que ya estaban ahí — unos los puso la planta,
+      otros aparecieron en el tueste. Saber de dónde viene cada uno cambia la forma de tomarlo.
+    </p>
+
+    <div class="cols3">
+      <div class="col-nota rev" data-d="1">
+        <h3>Lo que pone el origen</h3>
+        <p>La acidez y los matices frutales o florales vienen de la altura, la variedad y el suelo.
+          En Sereno, la manzana roja es acidez málica del grano: ninguna cantidad de tueste la habría
+          creado. Estas notas son frágiles — se pierden con el calor.</p>
+      </div>
+      <div class="col-nota rev" data-d="2">
+        <h3>Lo que pone el tueste</h3>
+        <p>El chocolate, el caramelo y la nuez aparecen cuando los azúcares y aminoácidos del grano
+          reaccionan con el calor. Cuanto más se avanza, más se van los matices del origen y más
+          aparecen cacao seco, madera y humo.</p>
+      </div>
+      <div class="col-nota rev" data-d="3">
+        <h3>Por eso son cuatro</h3>
+        <p>Mismo café de Chiapas en los cuatro. Lo que cambia es dónde se detiene el tueste: Atelier
+          lo para pronto para conservar el equilibrio, Darkneo lo lleva al segundo crack. Un solo
+          origen, cuatro lecturas.</p>
+      </div>
+    </div>
+
+    <div class="recuadro rev" data-d="2">
+      <span class="recuadro__sello">Para encontrarlas</span>
+      <p class="lead" style="max-width:70ch">
+        Pruébalo primero sin azúcar y sin leche, aunque luego se lo pongas. Huélelo antes del primer
+        sorbo. Y déjalo entibiar: en caliente el aroma tapa el sabor, y casi todas las notas aparecen
+        cuando la taza baja de temperatura.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TIENDA
+     ============================================================ -->
+<section class="sec escena" id="tienda" data-raton="12">
+  <div class="flota solo-md" data-scroll="140" style="--x:88%;--y:4%;--w:clamp(66px,7vw,104px);--depth:1.9;--rot:12deg;--dur:11s;--amp:16px;--z:6">
+    <div class="flota__i"><img src="assets/img/recortes/hongos.webp" alt="Dos hongos recortados" loading="lazy"></div>
+  </div>
+
+  <div class="wrap">
+    <p class="eyebrow rev">04 — Llévatelo a casa</p>
+    <h2 class="t-xl rev" data-d="1" style="margin:1.4rem 0 1.2rem;max-width:14ch">Presentaciones</h2>
+    <p class="lead mut rev" data-d="2" style="max-width:58ch">
+      En grano o con molienda fresca al momento — dinos tu método y lo ajustamos en barra. Puedes
+      pedirlo a domicilio, y lo enviamos a todo México.
+    </p>
+
+    <div class="gramaje rev" data-d="3" role="group" aria-label="Elegir presentación">
+      <button type="button" data-g="250" aria-pressed="true">250 g</button>
+      <button type="button" data-g="500" aria-pressed="false">500 g</button>
+      <button type="button" data-g="1k"  aria-pressed="false">1 kg</button>
+    </div>
+
+    <div class="rejilla-bolsas">
+      <article class="prod rev" data-d="1" data-blend="atelier" data-p250="150" data-p500="280" data-p1k="560">
+        <div class="prod__lienzo"><img src="assets/img/bolsas/atelier-250.webp" alt="Bolsa de 250 g de Atelier, con la etiqueta de collage de Tatifer4" loading="lazy"></div>
+        <p class="prod__tueste">Premium · tueste medio</p>
+        <h3>Atelier</h3>
+        <p class="prod__perfil">Balanceado, con Maragogipe. Retrogusto largo a cacao maduro.</p>
+        <div class="prod__pie"><span class="prod__precio">$150</span><span class="prod__g">250 g</span></div>
+        <a class="btn btn--rojo prod__pedir" href="#"><span>Pedir</span></a>
+      </article>
+
+      <article class="prod rev" data-d="2" data-blend="colcoll" data-p250="150" data-p500="280" data-p1k="560">
+        <div class="prod__lienzo"><img src="assets/img/bolsas/colcoll-250.webp" alt="Bolsa de 250 g de Col-Coll, con la etiqueta de collage de Tatifer4" loading="lazy"></div>
+        <p class="prod__tueste">Espresso · 75 % medio + 25 % oscuro</p>
+        <h3>Col-Coll</h3>
+        <p class="prod__perfil">Intenso y profundo. Chocolate amargo, melaza, especiado.</p>
+        <div class="prod__pie"><span class="prod__precio">$150</span><span class="prod__g">250 g</span></div>
+        <a class="btn btn--rojo prod__pedir" href="#"><span>Pedir</span></a>
+      </article>
+
+      <article class="prod rev" data-d="3" data-blend="darkneo" data-p250="150" data-p500="280" data-p1k="560">
+        <div class="prod__lienzo"><img src="assets/img/bolsas/darkneo-250.webp" alt="Bolsa de 250 g de Darkneo, con la etiqueta de collage de Tatifer4" loading="lazy"></div>
+        <p class="prod__tueste">French Roast · 100 % oscuro</p>
+        <h3>Darkneo</h3>
+        <p class="prod__perfil">Hasta el segundo crack. Cacao, caramelo y fondo a madera.</p>
+        <div class="prod__pie"><span class="prod__precio">$150</span><span class="prod__g">250 g</span></div>
+        <a class="btn btn--rojo prod__pedir" href="#"><span>Pedir</span></a>
+      </article>
+
+      <article class="prod rev" data-d="4" data-blend="sereno" data-p250="150" data-p500="280" data-p1k="560">
+        <div class="prod__lienzo"><img src="assets/img/bolsas/sereno-250.webp" alt="Bolsa de 250 g de Sereno descafeinado, con la etiqueta de collage de Tatifer4" loading="lazy"></div>
+        <p class="prod__tueste">Descafeinado al agua · tueste medio</p>
+        <h3>Sereno</h3>
+        <p class="prod__perfil">Piloncillo, manzana roja y almendra tostada. Sin disolventes.</p>
+        <div class="prod__pie"><span class="prod__precio">$150</span><span class="prod__g">250 g</span></div>
+        <a class="btn btn--rojo prod__pedir" href="#"><span>Pedir</span></a>
+      </article>
+    </div>
+
+    <div class="hero__cta rev" style="justify-content:flex-start;margin-top:clamp(2rem,4vw,3rem)">
+      <a class="btn btn--rojo" href="reservas.html?intencion=cafe"><span>Apartar café</span></a>
+      <a class="btn btn--linea" href="reservas.html?intencion=mesa"><span>Reservar mesa</span></a>
+    </div>
+
+    <div class="cuidados">
+      <div class="cuidado rev" data-d="1">
+        <span class="cuidado__n">45</span>
+        <div><h4>Días</h4><p>Consúmelo dentro de ese plazo desde el tueste. Después sigue siendo café,
+          pero ya no es este café.</p></div>
+      </div>
+      <div class="cuidado rev" data-d="2">
+        <span class="cuidado__n">·</span>
+        <div><h4>Hermético</h4><p>Guárdalo en recipiente cerrado, lejos de la luz. Sin refrigeración —
+          el frío condensa humedad y apaga los aromáticos.</p></div>
+      </div>
+      <div class="cuidado rev" data-d="3">
+        <span class="cuidado__n">·</span>
+        <div><h4>Al momento</h4><p>Muele justo antes de preparar. Es lo que más cambia la taza, más
+          que la máquina y más que el agua.</p></div>
+      </div>
+    </div>
+
+    <figure class="linea rev-mask">
+      <img src="assets/img/bolsas/linea-cuatro.jpg"
+           alt="Las cuatro bolsas de 250 g de LA 60 en fila: Atelier en rosa, Sereno en turquesa, Col-Coll en blanco y Darkneo en rojo"
+           width="1600" height="613" loading="lazy">
+      <figcaption>La línea de 250 g. Cuatro etiquetas, cuatro lecturas del mismo origen.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================================================
+     ATELIER DEL MES
+     ============================================================ -->
+<section class="sec plano plano--tinta plano--corte escena" id="mes" data-raton="18">
+  <div class="wrap mes">
+    <div class="mes__escena">
+      <div class="flota" data-scroll="90" style="--x:50%;--y:50%;--w:min(62vw,290px);--depth:1.4;--rot:-5deg;--dur:12s;--amp:18px;--z:8;translate:-50% -50%">
+        <div class="flota__i frontal"><img src="assets/img/etiquetas/trasera.jpg"
+             alt="Reverso de la etiqueta: guía de preparación para cinco métodos"
+             loading="lazy"></div>
+      </div>
+      <div class="flota solo-md" data-scroll="200" style="--x:4%;--y:8%;--w:clamp(60px,7vw,96px);--depth:2.3;--rot:-14deg;--dur:9s;--delay:-2s;--amp:20px;--z:9">
+        <div class="flota__i"><img src="assets/img/recortes/next.webp" alt="Recorte de prensa: NEXT! NOW!" loading="lazy"></div>
+      </div>
+      <div class="flota solo-md" data-scroll="180" style="--x:74%;--y:70%;--w:clamp(56px,6vw,84px);--depth:2.1;--rot:10deg;--dur:10s;--delay:-6s;--amp:18px;--z:9">
+        <div class="flota__i"><img src="assets/img/recortes/ojo-gris.webp" alt="Ojo recortado" loading="lazy"></div>
+      </div>
+    </div>
+
+    <div>
+      <p class="eyebrow rev">05 — Atelier del mes · café invitado</p>
+      <h2 class="t-xl rev" data-d="1" style="margin:1.4rem 0 .6rem">Un origen distinto cada mes</h2>
+      <p class="nota rev" data-d="1" style="color:var(--mostaza);margin-bottom:1.4rem">Edición limitada · solo 250 g</p>
+      <p class="lead rev" data-d="2" style="max-width:52ch">
+        Además de nuestros cuatro blends, recibimos como invitados pequeños lotes de café de
+        especialidad. Están disponibles únicamente en presentación de 250 g, porque no son un
+        producto: son una invitación a probar, conocer y compartir.
+      </p>
+      <p class="t-m rev" data-d="3" style="margin-top:1.6rem;color:var(--mostaza)">
+        Nuevas regiones. Nuevos granos.<br>Ediciones que no vuelven.
+      </p>
+      <dl class="mes__lista rev" data-d="3">
+        <div><dt>Presentación</dt><dd>250 g · única</dd></div>
+        <div><dt>Precio</dt><dd style="font-family:var(--font-titulo);font-size:2rem;line-height:1">$190</dd></div>
+        <div><dt>En cada bolsa</dt><dd>Origen, proceso, notas de cata y guía de preparación para
+          cinco métodos, con la escala de molienda que usamos en barra.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALERÍA VIVA · TATIFER4
+     MÓDULO EXTRAÍBLE — ver LEEME.md
+     ============================================================ -->
+<section class="sec galeria escena" id="galeria" data-modulo="tatifer4" data-raton="10">
+  <div class="wrap">
+    <div class="autora">
+      <div class="autora__retrato rev-mask">
+        <img src="assets/img/espacio-marcos.jpg" alt="Muro-ensamblaje de LA 60: decenas de marcos y recortes de madera y color compuestos como un solo collage" width="952" height="1288" loading="lazy">
+      </div>
+      <div>
+        <p class="eyebrow rev">06 — Galería viva · obra en venta</p>
+        <p class="autora__firma rev" data-d="1" style="margin-top:1.2rem">Tatifer4</p>
+        <h2 class="t-l rev" data-d="1" style="margin-bottom:1.2rem">Arathy Fernández</h2>
+        <p class="lead rev" data-d="2" style="max-width:52ch">
+          Creadora y directora artística de LA 60. Su obra no está colgada en el espacio: <em>es</em>
+          el espacio. Los muros, los marcos, las mesas y las tazas salen del mismo gesto — recortar,
+          superponer, dejar que las piezas encuentren su sitio.
+        </p>
+        <p class="lead mut rev" data-d="3" style="max-width:52ch;margin-top:1rem">
+          Todo lo que ves está disponible, en diferentes precios según el formato y
+          el momento en que se hizo. Si te llevas una, dejamos el hueco: así se sabe
+          que el muro está vivo.
+        </p>
+        <div class="hero__cta" style="justify-content:flex-start;margin-top:2rem">
+          <a class="btn btn--linea" href="reservas.html?intencion=obra"><span>Apartar una pieza</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- El catálogo completo vive en obra.html: no corre en el scroll de
+         la portada. Aquí solo la muestra y el pase. -->
+    <div class="pase">
+      <div class="pase__muestra rev">
+        <a href="obra.html#eclipses" aria-label="Serie Eclipses">
+          <img src="assets/img/obra/nueva-04.jpg" alt="Collage de la serie Eclipses: figura frente a un disco negro con corona de luz" loading="lazy"></a>
+        <a href="obra.html#anatomias" aria-label="Serie Anatomías">
+          <img src="assets/img/obra/nueva-01.jpg" alt="Collage de la serie Anatomías: un corazón anatómico azul con flores" loading="lazy"></a>
+        <a href="obra.html#abstracto" aria-label="Serie Abstracto">
+          <img src="assets/img/obra/obra-00.jpg" alt="Collage de la serie Abstracto, en azules y lilas" loading="lazy"></a>
+        <a href="obra.html#capas" aria-label="Serie Capas">
+          <img src="assets/img/obra/obra-06.jpg" alt="Collage de la serie Capas: círculos translúcidos en pastel" loading="lazy"></a>
+      </div>
+      <div class="pase__texto rev" data-d="2">
+        <p class="pase__cifra">17 piezas</p>
+        <p>En cuatro series — <b>Eclipses</b>, <b>Anatomías</b>, <b>Abstracto</b> y
+          <b>Capas</b> — con diferentes precios según el formato y el momento en que se
+          hizo cada una.</p>
+        <a class="btn btn--rojo" href="obra.html"><span>Entrar al catálogo</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     OBJETOS DE LA CASA
+     ============================================================ -->
+<section class="sec sec--tight plano plano--warm" id="objetos">
+  <div class="wrap">
+    <p class="eyebrow rev">07 — Objetos de la casa</p>
+    <h2 class="t-l rev" data-d="1" style="margin:1.2rem 0 2.4rem;max-width:20ch">Lo que se hace aquí también se va contigo</h2>
+
+    <div class="objetos">
+      <article class="objeto rev" data-d="1">
+        <div class="objeto__fig" style="--tono:#A7D6CE" data-objeto="taza"></div>
+        <h3>Taza 60 colores</h3>
+        <p>Cerámica de la casa. No hay dos iguales.</p>
+        <span class="objeto__precio">$460</span>
+      </article>
+      <article class="objeto rev" data-d="2">
+        <div class="objeto__fig" style="--tono:#E88FA8" data-objeto="pin"></div>
+        <h3>Pin collage</h3>
+        <p>Un recorte de Tatifer4 del tamaño de una solapa.</p>
+        <span class="objeto__precio">$60</span>
+      </article>
+      <article class="objeto rev" data-d="3">
+        <div class="objeto__fig" style="--tono:#C89B2E" data-objeto="libreta"></div>
+        <h3>Libreta collage</h3>
+        <p>Portada intervenida a mano, pieza por pieza.</p>
+        <span class="objeto__precio">$400</span>
+      </article>
+      <article class="objeto rev" data-d="4">
+        <div class="objeto__fig" style="--tono:#008D89" data-objeto="postal"></div>
+        <h3>Postales</h3>
+        <p>Para mandar por correo o para el refri. Las dos cuentan.</p>
+        <span class="objeto__precio">$30</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TALLER DE COLLAGE
+     ============================================================ -->
+<section class="sec plano plano--menta plano--corte-sup escena" id="taller" data-raton="14">
+  <div class="wrap taller">
+    <div>
+      <p class="eyebrow rev">08 — El atelier</p>
+      <h2 class="t-xl rev" data-d="1" style="margin:1.4rem 0 1.2rem;max-width:16ch">No necesitas saber hacer collage</h2>
+      <p class="nota rev" data-d="2" style="margin-bottom:1.4rem">Solo necesitas sentarte.</p>
+      <p class="lead rev" data-d="2" style="max-width:52ch">
+        La mesa grande se llena de revistas viejas, tijeras, pegamento y recortes que otros dejaron.
+        Llegas, pides un café y te pones a cortar. Nadie corrige a nadie. Al final se pega en el muro
+        o te lo llevas — las dos opciones son correctas.
+      </p>
+      <div class="taller__precios rev" data-d="3">
+        <div class="taller__precio"><strong>$100</strong><span>Cuota por sesión</span></div>
+        <div class="taller__precio"><strong>$50</strong><span>Con credencial de estudiante</span></div>
+      </div>
+      <p class="small rev" data-d="4" style="margin-top:1.2rem;opacity:.75">
+        Incluye materiales. El café va aparte, como debe ser.
+      </p>
+      <div class="hero__cta rev" data-d="4" style="justify-content:flex-start;margin-top:1.6rem">
+        <a class="btn btn--linea" href="reservas.html?intencion=taller"><span>Apartar mi lugar</span></a>
+      </div>
+    </div>
+
+    <div class="rev-mask" style="border-radius:var(--r);overflow:clip">
+      <img src="assets/img/espacio-galeria.jpg" alt="Sala de LA 60: sillones, mesa de tronco y el muro de marcos ensamblados al fondo" width="952" height="1288" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EL ESPACIO
+     ============================================================ -->
+<section class="sec" id="espacio">
+  <div class="wrap">
+    <p class="eyebrow rev">09 — El espacio</p>
+    <h2 class="t-xl rev" data-d="1" style="margin:1.4rem 0 2.4rem;max-width:18ch">Una casa del Centro que se dejó intervenir</h2>
+
+    <div class="mosaico">
+      <figure class="mos mos--a rev-mask">
+        <img src="assets/img/espacio-barra.jpg" alt="El muro-ensamblaje de LA 60 visto completo desde abajo, aún con el andamio del montaje" width="1288" height="952" loading="lazy">
+        <figcaption class="mos__pie">El muro, en montaje</figcaption>
+      </figure>
+      <figure class="mos mos--b rev-mask">
+        <img src="assets/img/espacio-circulos.jpg" alt="Barra roja de azulejo, bancos amarillos y bicicleta colgada sobre muro azul" width="952" height="1288" loading="lazy">
+        <figcaption class="mos__pie">La barra</figcaption>
+      </figure>
+      <figure class="mos mos--c rev-mask">
+        <img src="assets/img/espacio-sala.jpg" alt="Sala azul con puertas antiguas, silla acapulco turquesa y piso de pasta" width="952" height="1288" loading="lazy">
+        <figcaption class="mos__pie">El patio de atrás</figcaption>
+      </figure>
+      <figure class="mos mos--d rev-mask">
+        <img src="assets/img/espacio-marcos.jpg" alt="Muro mostaza con cafeto dibujado a línea y el ensamblaje de marcos a la derecha" width="952" height="1288" loading="lazy">
+        <figcaption class="mos__pie">El cafeto en el muro</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MARQUESINA 2
+     ============================================================ -->
+<div class="marq marq--kinder" aria-hidden="true" style="--vel:26s">
+  <div class="marq__pista">
+    <div class="marq__grupo">
+      <span class="marq__item">Calle 60 № 393</span><i class="marq__punto"></i>
+      <span class="marq__item">Centro · Mérida</span><i class="marq__punto"></i>
+      <span class="marq__item">Ven a hacer algo con tus manos</span><i class="marq__punto"></i>
+    </div>
+    <div class="marq__grupo">
+      <span class="marq__item">Calle 60 № 393</span><i class="marq__punto"></i>
+      <span class="marq__item">Centro · Mérida</span><i class="marq__punto"></i>
+      <span class="marq__item">Ven a hacer algo con tus manos</span><i class="marq__punto"></i>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     VISITA
+     ============================================================ -->
+<section class="sec escena" id="visita" data-raton="12">
+  <div class="flota solo-md" data-scroll="130" style="--x:86%;--y:14%;--w:min(20vw,240px);--depth:.8;--rot:8deg;--dur:18s;--amp:14px;--z:1;opacity:.45">
+    <div class="flota__i"><img src="assets/img/cafeto-kinder.webp" alt="" width="720" height="1080" loading="lazy"></div>
+  </div>
+
+  <div class="wrap visita">
+    <div>
+      <p class="eyebrow rev">10 — Visita la 60</p>
+      <h2 class="t-xl rev" data-d="1" style="margin:1.4rem 0 1.2rem;max-width:14ch">y prueba su cafecito</h2>
+      <p class="lead rev" data-d="2" style="max-width:48ch">
+        Te lo molemos para tu método, o te lo damos en grano para que lo hagas tú. Y si no estás en
+        Mérida, te lo mandamos.
+      </p>
+      <div class="hero__cta rev" data-d="3" style="justify-content:flex-start;margin-top:2rem">
+        <a class="btn btn--rojo" href="reservas.html"><span>Reservar</span></a>
+        <a class="btn btn--linea" href="https://www.instagram.com/lasesenta" target="_blank" rel="noopener"><span>Instagram</span></a>
+      </div>
+    </div>
+
+    <dl>
+      <div class="dato rev" data-d="1">
+        <dt>Dirección</dt>
+        <dd>Calle 60 № 393 × 43 y 45<br>Centro, Mérida, Yucatán</dd>
+      </div>
+      <div class="dato rev" data-d="2">
+        <dt>Horario</dt>
+        <dd><!-- PENDIENTE: confirmar horario real antes de publicar -->
+          <span class="mut">Por confirmar</span></dd>
+      </div>
+      <div class="dato rev" data-d="3">
+        <dt>Instagram</dt>
+        <dd><a href="https://www.instagram.com/lasesenta" target="_blank" rel="noopener">@lasesenta</a></dd>
+      </div>
+      <div class="dato rev" data-d="4">
+        <dt>Envíos</dt>
+        <dd>A todo México</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============================================================
+     PIE
+     ============================================================ -->
+<footer class="pie">
+  <div class="wrap pie__fila">
+    <a class="pie__logo" href="#inicio">
+      <img src="assets/img/logo-tinta.webp" alt="LA 60 · Café Atelier · 393"
+           width="661" height="900" loading="lazy">
+    </a>
+    <p class="pie__legal">© <span data-anio>2026</span> LA 60 Café Atelier · Mérida, Yucatán ·
+      Obra de Tatifer4 · Café orgánico de Chiapas</p>
+  </div>
+</footer>
+
+<script src="assets/js/datos.js" defer></script>
+<script src="assets/js/la60.js" defer></script>
+</body>
+</html>
