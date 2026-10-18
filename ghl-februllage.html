@@ -1,0 +1,2025 @@
+<!-- ══════════════════════════════════════════════════════════════
+     LA 60 · CAFÉ ATELIER — bloque para el elemento de código de GHL
+     Generado desde februllage.html. No editar aquí: se edita el sitio y se
+     vuelve a generar con ghl/construir-ghl.py.
+
+     Las imágenes y las tipografías NO van dentro de este bloque: se
+     cargan desde https://archivos.la60cafeatelier.com/
+     Esa carpeta tiene que existir y ser pública antes de pegar esto.
+     ══════════════════════════════════════════════════════════════ -->
+<style>
+#la60 /* ============================================================
+   LA 60 · CAFÉ ATELIER — sitio web
+   Sistema editorial v3 llevado a pantalla.
+   Lenguaje: collage · superposición · texturas · color controlado.
+   Motor visual: objetos flotantes (composición, #la60 no decoración).
+   ============================================================ */
+
+/* ============ TIPOGRAFÍAS OFICIALES ============ */
+@font-face{font-family:'LORE';src:url('https://archivos.la60cafeatelier.com/fonts/lore-regular.woff2') format('woff2');font-weight:100 550;font-style:normal;font-display:swap}
+@font-face{font-family:'LORE';src:url('https://archivos.la60cafeatelier.com/fonts/lore-bold.woff2') format('woff2');font-weight:551 900;font-style:normal;font-display:swap}
+@font-face{font-family:'LORE Display';src:url('https://archivos.la60cafeatelier.com/fonts/lore-bold.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'LORE Alt';src:url('https://archivos.la60cafeatelier.com/fonts/lore-alt-bold.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Warung Kopi';src:url('https://archivos.la60cafeatelier.com/fonts/warungkopi-300-normal.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Warung Kopi';src:url('https://archivos.la60cafeatelier.com/fonts/warungkopi-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Warung Kopi';src:url('https://archivos.la60cafeatelier.com/fonts/warungkopi-400-italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'Warung Kopi';src:url('https://archivos.la60cafeatelier.com/fonts/warungkopi-700-normal.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Caveat';src:url('https://archivos.la60cafeatelier.com/fonts/caveat-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Caveat';src:url('https://archivos.la60cafeatelier.com/fonts/caveat-latin-700-normal.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Limoncello Recipe';src:url('https://archivos.la60cafeatelier.com/fonts/limoncello-regular.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+#la60{
+  /* -- roles tipográficos (cambiar aquí = cambiar todo el sitio) -- */
+  --font-titulo:'LORE Display','LORE','Warung Kopi',cursive;
+  --font-titulo-alt:'LORE Alt','LORE',cursive;
+  --font-cuerpo:'Warung Kopi',system-ui,-apple-system,sans-serif;
+  --font-nota:'Caveat',cursive;
+  --font-arte:'Limoncello Recipe','Caveat',cursive;
+
+  /* -- paleta oficial · Manual CNSTR 2026 -- */
+  --kinder:#008D89;
+  --kinder-dark:#006D6A;
+  --rojo:#E31E24;
+  --mostaza:#C89B2E;
+  --papel:#FCF7F2;
+  --papel-warm:#F5EEE5;
+  --menta:#A7D6CE;
+  --rosa:#E88FA8;
+  --fucsia:#C2185B;
+  --marcador:#3A3A3A;
+  --linea:#E6DCCF;
+  --blanco:#fff;
+
+  /* -- ritmo -- */
+  --gut:clamp(1.25rem,3.6vw,3.25rem);
+  --maxw:1380px;
+  --r:14px;
+  --ease:cubic-bezier(.19,1,.22,1);
+}
+#la60 *, #la60 *::before, #la60 *::after{box-sizing:border-box;margin:0;padding:0}
+#la60 /* clip, #la60 no hidden: los objetos que sobresalen se recortan sin crear un
+   contenedor de scroll — así los blends pegajosos siguen funcionando */
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
+#la60{
+  background:var(--papel);
+  color:var(--marcador);
+  font-family:var(--font-cuerpo);
+  font-size:clamp(1rem,.42vw + .92rem,1.1rem);
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:clip;
+}
+#la60 /* height:auto es obligatorio: sin él, #la60 max-width encoge el ancho pero deja
+   el alto del atributo y las fotos salen estiradas. */
+img, #la60 svg{display:block;max-width:100%}
+#la60 img{height:auto}
+#la60 a{color:inherit;text-decoration:none}
+#la60 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+#la60 ::selection{background:var(--mostaza);color:var(--papel)}
+#la60 /* textura de papel: sostiene todo el sistema */
+body::before{
+  content:'';position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.5;
+  background-image:
+    radial-gradient(circle at 18% 32%,rgba(200,155,46,.05) 0 2px,transparent 3px),
+    radial-gradient(circle at 72% 68%,rgba(58,58,58,.045) 0 1.5px,transparent 3px),
+    radial-gradient(circle at 46% 88%,rgba(0,141,137,.04) 0 2px,transparent 3px);
+  background-size:180px 180px,140px 140px,220px 220px;
+  mix-blend-mode:multiply;
+}
+#la60 /* ============================================================
+   1 · TIPOGRAFÍA DE PANTALLA
+   ============================================================ */
+.t-mega, #la60 .t-xl, #la60 .t-l, #la60 .t-m{
+  font-family:var(--font-titulo);
+  text-transform:uppercase;      /* LORE es solo mayúsculas */
+  line-height:.86;
+  letter-spacing:-.015em;
+  font-weight:700;
+}
+#la60 .t-mega{font-size:clamp(3.4rem,14.5vw,13.5rem)}
+#la60 .t-xl{font-size:clamp(2.6rem,7.6vw,6.6rem);line-height:.9}
+#la60 .t-l{font-size:clamp(2rem,4.6vw,3.9rem);line-height:.94}
+#la60 .t-m{font-size:clamp(1.35rem,2.2vw,2.1rem);line-height:1.02}
+#la60 .t-alt{font-family:var(--font-titulo-alt)}
+#la60 .t-arte{font-family:var(--font-arte);text-transform:none;letter-spacing:.01em;font-weight:400}
+#la60 .nota{font-family:var(--font-nota);font-size:clamp(1.25rem,2vw,1.8rem);line-height:1.2}
+#la60 .eyebrow{
+  font-family:var(--font-cuerpo);font-weight:700;
+  font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;
+  display:flex;align-items:center;gap:.7em;
+}
+#la60 .eyebrow::before{content:'';width:2.2em;height:2px;background:currentColor;flex:none;opacity:.5}
+#la60 .lead{font-size:clamp(1.08rem,1.05vw + .82rem,1.42rem);line-height:1.5;font-weight:300}
+#la60 .small{font-size:.82rem;line-height:1.5}
+#la60 .mut{opacity:.66}
+#la60 /* ============================================================
+   2 · ESTRUCTURA
+   ============================================================ */
+.wrap{width:min(100% - var(--gut)*2,var(--maxw));margin-inline:auto}
+#la60 .sec{position:relative;padding-block:clamp(5rem,11vw,10rem);z-index:2}
+#la60 /* el contenido siempre por encima de los objetos de fondo */
+.sec > .wrap{position:relative;z-index:5}
+#la60 /* objetos que solo aparecen cuando hay sitio para que floten */
+.solo-md{display:none}
+@media(min-width:900px){#la60 .solo-md{display:block}}
+#la60 .sec--tight{padding-block:clamp(3.5rem,7vw,6rem)}
+#la60 /* planos de color = los "volúmenes" del sistema */
+.plano{position:relative;isolation:isolate}
+#la60 .plano--kinder{background:var(--kinder);color:var(--papel);--linea:rgba(252,247,242,.22);--btn-fill:#FCF7F2;--btn-txt:#008D89}
+#la60 .plano--tinta{background:var(--marcador);color:var(--papel);--linea:rgba(252,247,242,.18);--btn-fill:#FCF7F2;--btn-txt:#3A3A3A}
+#la60 .plano--menta{background:var(--menta);color:var(--kinder-dark);--linea:rgba(0,109,106,.24);--btn-fill:#006D6A;--btn-txt:#FCF7F2}
+#la60 .plano--warm{background:var(--papel-warm)}
+#la60 /* corte diagonal entre volúmenes: el papel rasgado del collage */
+.plano--corte{clip-path:polygon(0 0,100% 3.2vw,100% 100%,0 calc(100% - 3.2vw))}
+#la60 .plano--corte-sup{clip-path:polygon(0 3.2vw,100% 0,100% 100%,0 100%)}
+#la60 .plano--corte-inf{clip-path:polygon(0 0,100% 0,100% calc(100% - 3.2vw),0 100%)}
+#la60 /* cuadrícula blanco/rojo — patrón de identidad propio */
+.trama{
+  background-image:
+    linear-gradient(var(--rojo) 1.5px,transparent 1.5px),
+    linear-gradient(90deg,var(--rojo) 1.5px,transparent 1.5px);
+  background-size:22px 22px;
+  opacity:.28;
+}
+#la60 /* ============================================================
+   3 · MOTOR DE OBJETOS FLOTANTES
+   Dos capas: la exterior recibe el paralaje (JS), #la60 la interior
+   respira sola (CSS). Nunca compiten por el mismo transform.
+   ============================================================ */
+.escena{position:relative}
+#la60 .flota{
+  position:absolute;
+  left:var(--x,50%);top:var(--y,50%);
+  width:var(--w,140px);
+  z-index:var(--z,3);
+  pointer-events:none;
+  will-change:transform;
+  transform:translate3d(
+    calc(var(--mx,0px) * var(--depth,1)),
+    calc(var(--my,0px) * var(--depth,1) + var(--sy,0px) * var(--depth,1)),
+    0);
+}
+#la60 .flota__i{
+  animation:respira var(--dur,13s) ease-in-out var(--delay,0s) infinite alternate;
+  transform-origin:50% 50%;
+}
+@keyframes respira{
+  from{transform:translateY(calc(var(--amp,10px) * -1)) rotate(calc(var(--rot,0deg) - var(--giro,1.6deg)))}
+  to  {transform:translateY(var(--amp,10px)) rotate(calc(var(--rot,0deg) + var(--giro,1.6deg)))}
+}
+#la60 /* Los recortes de la manteleta ya vienen con su silueta: nada de marcos.
+   La sombra los separa del fondo sin inventarles un borde. */
+.flota img{filter:drop-shadow(0 20px 24px rgba(46,46,46,.26))}
+#la60 .flota--suave img, #la60 .flota--suave svg{filter:drop-shadow(0 14px 18px rgba(58,58,58,.14))}
+#la60 /* ============================================================
+   4 · NAVEGACIÓN
+   ============================================================ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:60;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:1rem;padding:1rem clamp(1rem,3vw,2rem);
+  transition:transform .45s var(--ease);
+}
+#la60 .nav.is-oculto{transform:translateY(-130%)}
+#la60 .nav__grupo{display:flex;gap:.4rem;align-items:center}
+#la60 .pill{
+  display:inline-flex;align-items:center;gap:.45em;
+  padding:.55em 1.05em;border-radius:100px;
+  background:rgba(252,247,242,.86);
+  border:1.5px solid rgba(58,58,58,.16);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  font-size:.72rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--marcador);
+  transition:background .3s,color .3s,border-color .3s,transform .3s var(--ease);
+}
+#la60 .pill:hover{background:var(--marcador);color:var(--papel);border-color:var(--marcador);transform:translateY(-2px)}
+#la60 .pill--acento{background:var(--rojo);color:var(--papel);border-color:var(--rojo)}
+#la60 .pill--acento:hover{background:var(--marcador);border-color:var(--marcador)}
+#la60 .pill--marca{letter-spacing:.11em}
+#la60 .nav__links{display:none}
+@media(min-width:900px){#la60 .nav__links{display:flex;gap:.4rem}}
+#la60 /* pestaña lateral del 393 */
+.tab393{
+  position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:55;
+  background:var(--kinder);color:var(--papel);
+  padding:1.15rem .62rem;border-radius:10px 0 0 10px;
+  font-family:var(--font-titulo);font-size:.92rem;letter-spacing:.16em;
+  writing-mode:vertical-rl;
+  box-shadow:-6px 0 24px -10px rgba(58,58,58,.4);
+  transition:padding-right .35s var(--ease),background .35s;
+}
+#la60 .tab393:hover{padding-right:1.1rem;background:var(--rojo)}
+@media(max-width:760px){#la60 .tab393{display:none}}
+#la60 /* ============================================================
+   5 · HERO
+   ============================================================ */
+.hero{
+  position:relative;min-height:100svh;overflow:clip;
+  display:grid;align-items:center;
+  padding-block:clamp(7rem,14vh,10rem) clamp(4rem,9vh,7rem);
+}
+#la60 .hero__fondo{
+  position:absolute;inset:0;z-index:0;
+  /* paradas intermedias para que el degradado no marque un canto visible */
+  background:
+    radial-gradient(120% 85% at 50% 8%,rgba(167,214,206,.5) 0%,rgba(167,214,206,.22) 34%,rgba(167,214,206,.06) 52%,transparent 68%),
+    radial-gradient(90% 70% at 88% 92%,rgba(200,155,46,.24) 0%,rgba(200,155,46,.08) 34%,transparent 62%),
+    var(--papel);
+}
+#la60 .hero__cuadricula{
+  position:absolute;inset:auto 0 0 0;height:38vh;z-index:0;
+  -webkit-mask-image:linear-gradient(transparent,#000 85%);
+  mask-image:linear-gradient(transparent,#000 85%);
+  opacity:.14;
+}
+#la60 .hero__centro{position:relative;z-index:12;text-align:center;pointer-events:none}
+#la60 /* El logotipo va tal cual viene: no se recorta, #la60 no se recolorea, #la60 no se
+   le añade nada. Solo se escala. */
+.hero__logo{margin-inline:auto;width:min(41vw,clamp(150px,25vh,260px))}
+#la60 .hero__logo img{width:100%;height:auto}
+#la60 .hero__sub{
+  margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:.5rem .9rem;
+  justify-content:center;align-items:center;
+  font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+}
+#la60 .hero__sub span{opacity:.72}
+#la60 .hero__punto{width:5px;height:5px;border-radius:50%;background:var(--rojo);flex:none}
+#la60 .hero__cta{margin-top:2.2rem;display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;pointer-events:auto}
+#la60 .btn{
+  display:inline-flex;align-items:center;gap:.6em;
+  padding:.9em 1.6em;border-radius:100px;
+  font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  background:var(--marcador);color:var(--papel);
+  border:1.5px solid var(--marcador);
+  transition:transform .35s var(--ease),background .3s,color .3s;
+}
+#la60 .btn:hover{transform:translateY(-3px)}
+#la60 .btn--linea{background:transparent;color:inherit;border-color:currentColor}
+#la60 .btn--linea:hover{
+  background:var(--btn-fill,#3A3A3A);
+  color:var(--btn-txt,#FCF7F2);
+  border-color:var(--btn-fill,#3A3A3A);
+}
+#la60 .btn--rojo{background:var(--rojo);border-color:var(--rojo)}
+#la60 .btn--rojo:hover{background:var(--kinder);border-color:var(--kinder)}
+#la60 /* --- reparto de los objetos de la portada ---------------------------
+   Los recortes van a escalas muy distintas —del patín de 155 px al
+   corazón de 40— para que la composición tenga primer plano y fondo.
+   Móvil primero: sobreviven cuatro, #la60 se van a las esquinas y se quedan
+   detrás del título (--z:2). La franja central queda libre.           */
+.h-personaje{--x:58%;--y:76%;--w:34vw;--depth:1.1;--rot:2deg;--dur:12s;--amp:12px;--z:2}
+#la60 .h-bolsa{--x:2%;--y:70%;--w:30vw;--depth:1.5;--rot:-9deg;--dur:10s;--delay:-2s;--amp:14px;--z:2}
+#la60 .h-r1{--x:1%;--y:4%;--w:30vw;--depth:2;--rot:-11deg;--dur:9s;--delay:-1s;--amp:16px;--z:2}
+#la60 .h-r2{--x:64%;--y:3%;--w:32vw;--depth:1.9;--rot:7deg;--dur:11s;--delay:-4s;--amp:15px;--z:2}
+#la60 .h-r8{--x:86%;--y:58%;--w:12vw;--depth:2.8;--rot:9deg;--dur:7.5s;--delay:-2s;--amp:22px;--z:2}
+@media(min-width:900px){#la60 /* En pantalla ancha sí hay sitio: los recortes pasan delante del título
+     y la composición se abre en profundidad. */
+  .h-cafeto-a{--x:-3%;--y:1%;--w:min(34vw,470px);--depth:.5;--rot:-7deg;--dur:17s;--amp:12px;--z:2}#la60 .hero__logo{width:min(28vw,clamp(200px,32vh,340px))}#la60 .h-personaje{--x:63%;--y:20%;--w:min(30vw,330px);--depth:1.25;--rot:2deg;--dur:12s;--amp:16px;--z:14}#la60 .h-bolsa{--x:8%;--y:42%;--w:min(15vw,170px);--depth:1.7;--rot:-9deg;--dur:10s;--delay:-2s;--amp:18px;--z:15}#la60 /* grandes, #la60 en primer plano */
+  .h-r1{--x:2%;--y:7%;--w:clamp(96px,11.5vw,164px);--depth:2.1;--rot:-11deg;--dur:9s;--delay:-1s;--amp:20px;--z:16}#la60 .h-r2{--x:81%;--y:4%;--w:clamp(104px,12.5vw,178px);--depth:1.9;--rot:7deg;--dur:11s;--delay:-4s;--amp:17px;--z:16}#la60 .h-r3{--x:26%;--y:74%;--w:clamp(82px,9.5vw,138px);--depth:2.4;--rot:5deg;--dur:8.5s;--delay:-3s;--amp:22px;--z:16}#la60 .h-r4{--x:63%;--y:76%;--w:clamp(72px,8.5vw,124px);--depth:2.2;--rot:-6deg;--dur:10s;--delay:-6s;--amp:19px;--z:16}#la60 /* medianos */
+  .h-r5{--x:11%;--y:66%;--w:clamp(58px,7vw,102px);--depth:2.3;--rot:14deg;--dur:12s;--delay:-5s;--amp:18px;--z:16}#la60 .h-r6{--x:33%;--y:15%;--w:clamp(56px,6.8vw,98px);--depth:2.5;--rot:-8deg;--dur:9.5s;--delay:-7s;--amp:21px;--z:16}#la60 .h-r7{--x:91%;--y:77%;--w:clamp(48px,5.6vw,82px);--depth:2.6;--rot:11deg;--dur:8s;--delay:-2.5s;--amp:23px;--z:16}#la60 /* pequeños, #la60 los que más se mueven */
+  .h-r8{--x:88%;--y:57%;--w:clamp(30px,3.6vw,54px);--depth:2.8;--rot:9deg;--dur:7.5s;--delay:-2s;--amp:25px;--z:16}#la60 .h-r9{--x:2%;--y:31%;--w:clamp(42px,5vw,74px);--depth:2.7;--rot:-4deg;--dur:10.5s;--delay:-8s;--amp:20px;--z:16}#la60 .h-r10{--x:90%;--y:25%;--w:clamp(46px,5.4vw,80px);--depth:2.5;--rot:13deg;--dur:11.5s;--delay:-3.5s;--amp:18px;--z:16}}
+#la60 .scrollcue{
+  position:absolute;left:50%;bottom:1.6rem;transform:translateX(-50%);z-index:14;
+  display:grid;justify-items:center;gap:.55rem;
+  font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;opacity:.55;
+}
+#la60 .scrollcue i{display:block;width:1px;height:44px;background:currentColor;transform-origin:top;animation:cae 2.1s var(--ease) infinite}
+@keyframes cae{0%{transform:scaleY(0)}45%{transform:scaleY(1)}100%{transform:scaleY(0);transform-origin:bottom}}
+#la60 /* ============================================================
+   6 · MARQUESINA
+   ============================================================ */
+.marq{
+  overflow:clip;border-block:1.5px solid var(--linea);
+  padding-block:.85rem;background:var(--papel-warm);
+  --vel:34s;
+}
+#la60 .marq--kinder{background:var(--kinder);color:var(--papel);border-color:rgba(252,247,242,.2)}
+#la60 .marq__pista{display:flex;width:max-content;animation:corre var(--vel) linear infinite}
+#la60 .marq:hover .marq__pista{animation-play-state:paused}
+#la60 .marq__grupo{display:flex;align-items:center;gap:1.6rem;padding-right:1.6rem;flex:none}
+#la60 .marq__item{
+  font-family:var(--font-titulo);text-transform:uppercase;
+  font-size:clamp(1.5rem,3.6vw,3rem);line-height:1;white-space:nowrap;
+}
+#la60 .marq__punto{width:.42em;height:.42em;border-radius:50%;background:var(--rojo);flex:none}
+#la60 .marq--kinder .marq__punto{background:var(--mostaza)}
+@keyframes corre{to{transform:translateX(-50%)}}
+#la60 /* ============================================================
+   7 · REVELADOS AL SCROLL
+   ============================================================ */
+.rev{opacity:0;transform:translateY(34px);transition:opacity .95s var(--ease),transform .95s var(--ease)}
+#la60 .rev.is-on{opacity:1;transform:none}
+#la60 .rev[data-d="1"]{transition-delay:.1s}
+#la60 .rev[data-d="2"]{transition-delay:.2s}
+#la60 .rev[data-d="3"]{transition-delay:.3s}
+#la60 .rev[data-d="4"]{transition-delay:.4s}
+#la60 .rev--izq{transform:translateX(-40px)}
+#la60 .rev--der{transform:translateX(40px)}
+#la60 /* la imagen se descubre como si alguien la pegara */
+.rev-mask{clip-path:inset(0 0 100% 0);transition:clip-path 1.25s var(--ease)}
+#la60 .rev-mask.is-on{clip-path:inset(0 0 0 0)}
+#la60 /* ============================================================
+   8 · ORIGEN — cifras
+   ============================================================ */
+.cifras{display:grid;gap:clamp(1.6rem,3vw,3rem);grid-template-columns:1fr}
+@media(min-width:760px){#la60 .cifras{grid-template-columns:repeat(3,1fr)}}
+#la60 .cifra{border-top:1.5px solid var(--linea);padding-top:1.1rem}
+#la60 /* la cifra también es un <p>: hay que ganarle a `.cifra p` en especificidad */
+.cifra .cifra__n{
+  font-family:var(--font-titulo);font-size:clamp(3.2rem,7vw,5.4rem);
+  line-height:.86;letter-spacing:-.02em;margin-top:0;opacity:1;font-weight:700;
+}
+#la60 .cifra .cifra__n em{font-style:normal;font-size:.42em;vertical-align:.55em;margin-left:.08em;opacity:.7}
+#la60 .cifra p{margin-top:.7rem;font-size:.95rem;line-height:1.5;opacity:.85;font-weight:300}
+#la60 /* ============================================================
+   9 · VARIEDADES — tira horizontal
+   ============================================================ */
+.tira{
+  display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:.5rem calc((100vw - min(100% - var(--gut)*2,var(--maxw)))/2) 1.6rem;
+  margin-inline:calc(50% - 50vw);
+  scrollbar-width:none;
+}
+#la60 .tira::-webkit-scrollbar{display:none}
+#la60 .var{
+  flex:0 0 min(78vw,300px);scroll-snap-align:center;
+  background:var(--papel);border:1.5px solid var(--linea);border-radius:var(--r);
+  padding:1.5rem 1.35rem 1.35rem;position:relative;
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease);
+}
+#la60 .var:hover{transform:translateY(-8px) rotate(-.7deg);box-shadow:0 26px 40px -22px rgba(58,58,58,.4)}
+#la60 .var__n{
+  position:absolute;top:1.1rem;right:1.2rem;
+  font-family:var(--font-titulo);font-size:1.5rem;opacity:.16;
+}
+#la60 .var h3{font-family:var(--font-titulo);text-transform:uppercase;font-size:1.55rem;line-height:1;margin-bottom:.2rem}
+#la60 .var__lat{font-style:italic;font-size:.78rem;opacity:.6;display:block;margin-bottom:.9rem}
+#la60 .var p{font-size:.92rem;font-weight:300;line-height:1.5}
+#la60 .var__tag{
+  display:inline-block;margin-top:1.1rem;padding:.35em .8em;border-radius:100px;
+  font-size:.64rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  background:var(--tono,var(--menta));color:var(--tono-txt,var(--kinder-dark));
+}
+#la60 /* ============================================================
+   10 · BLENDS — volúmenes que se apilan
+   ============================================================ */
+.pila{position:relative}
+#la60 .blend{
+  position:sticky;top:0;min-height:100svh;
+  display:grid;align-items:center;overflow:clip;
+  background:var(--bg);color:var(--tx);
+  border-top:1.5px solid rgba(252,247,242,.16);
+}
+#la60 .blend__rejilla{
+  display:grid;gap:clamp(1.6rem,4vw,4rem);align-items:center;
+  grid-template-columns:1fr;padding-block:clamp(4.5rem,9vh,7rem);
+}
+@media(min-width:900px){#la60 .blend__rejilla{grid-template-columns:1.05fr .95fr}}
+#la60 .blend__num{
+  font-family:var(--font-titulo);font-size:clamp(7rem,26vw,22rem);line-height:.72;
+  position:absolute;right:-.06em;bottom:-.14em;opacity:.09;pointer-events:none;user-select:none;
+}
+#la60 .blend h2{margin:.5rem 0 .35rem}
+#la60 .blend__claim{font-family:var(--font-nota);font-size:clamp(1.4rem,2.6vw,2.2rem);opacity:.85;margin-bottom:1.2rem}
+#la60 .blend__desc{max-width:46ch;font-weight:300}
+#la60 .ficha{display:grid;grid-template-columns:repeat(2,1fr);gap:1.1rem 1.4rem;margin-top:2rem;max-width:46ch}
+#la60 .ficha dt{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;opacity:.6;margin-bottom:.2rem}
+#la60 .ficha dd{font-size:.95rem;line-height:1.35}
+#la60 .blend__notas{margin-top:2rem;border-top:1.5px solid currentColor;padding-top:1.1rem;max-width:52ch;opacity:.92}
+#la60 .blend__notas .eyebrow{margin-bottom:.9rem;opacity:.75}
+#la60 .blend__notas li{list-style:none;font-size:.9rem;font-weight:300;line-height:1.5;padding-left:1.1rem;position:relative;margin-bottom:.55rem}
+#la60 .blend__notas li::before{content:'';position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.55}
+#la60 .blend__notas b{font-weight:700}
+#la60 /* la ficha técnica abre con el frontal de la etiqueta, #la60 no con la bolsa */
+.blend__frontal{position:relative;display:grid;place-items:center;min-height:min(58vh,480px)}
+#la60 .frontal, #la60 .frontal svg, #la60 .frontal img{width:100%;height:auto;display:block}
+#la60 .frontal svg, #la60 .frontal img{
+  border-radius:2px;
+  box-shadow:0 34px 44px -26px rgba(46,46,46,.55);
+}
+#la60 /* ============================================================
+   11 · BOLSA DE CAFÉ
+   Los renders reales, #la60 con transparencia. No se recolorean ni se
+   les añade sombra falsa: el render ya trae la suya.
+   ============================================================ */
+.bolsa, #la60 .flota__i > img[src*="bolsas/"]{width:100%;height:auto}
+#la60 /* ============================================================
+   12 · NOTAS — editorial a tres columnas
+   ============================================================ */
+.cols3{display:grid;gap:clamp(1.8rem,3.4vw,3.2rem);grid-template-columns:1fr}
+@media(min-width:820px){#la60 .cols3{grid-template-columns:repeat(3,1fr)}}
+#la60 .col-nota h3{font-family:var(--font-titulo);text-transform:uppercase;font-size:1.5rem;line-height:.98;margin-bottom:.8rem}
+#la60 .col-nota{border-top:3px solid var(--marcador);padding-top:1.1rem}
+#la60 .col-nota:nth-child(2){border-color:var(--rojo)}
+#la60 .col-nota:nth-child(3){border-color:var(--mostaza)}
+#la60 .col-nota p{font-weight:300;font-size:.96rem}
+#la60 .recuadro{
+  margin-top:clamp(2.4rem,5vw,4rem);
+  border:1.5px solid var(--linea);border-radius:var(--r);
+  padding:clamp(1.4rem,3vw,2.4rem);
+  background:var(--papel);position:relative;
+}
+#la60 .recuadro__sello{
+  position:absolute;top:-.9rem;left:1.6rem;background:var(--rojo);color:var(--papel);
+  padding:.32em .9em;border-radius:100px;
+  font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+}
+#la60 /* ============================================================
+   13 · TIENDA
+   ============================================================ */
+.gramaje{display:flex;gap:.4rem;flex-wrap:wrap;margin-block:1.6rem 2.6rem}
+#la60 .gramaje button{
+  padding:.62em 1.25em;border-radius:100px;border:1.5px solid var(--linea);
+  font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  transition:all .3s var(--ease);
+}
+#la60 .gramaje button[aria-pressed="true"]{background:var(--marcador);color:var(--papel);border-color:var(--marcador)}
+#la60 .gramaje button:hover{border-color:var(--marcador)}
+#la60 .rejilla-bolsas{display:grid;gap:clamp(1rem,2vw,1.6rem);grid-template-columns:repeat(2,1fr)}
+@media(min-width:900px){#la60 .rejilla-bolsas{grid-template-columns:repeat(4,1fr)}}
+#la60 .prod{
+  position:relative;border:1.5px solid var(--linea);border-radius:var(--r);
+  background:var(--papel);padding:1.1rem 1.1rem 1.3rem;overflow:clip;
+  display:flex;flex-direction:column;
+  transition:transform .55s var(--ease),box-shadow .55s var(--ease),border-color .3s;
+}
+#la60 .prod:hover{transform:translateY(-10px);box-shadow:0 34px 46px -28px rgba(58,58,58,.45);border-color:var(--marcador)}
+#la60 .prod__lienzo{
+  position:relative;display:grid;place-items:center;
+  aspect-ratio:1/1;margin:-.4rem -.4rem .9rem;border-radius:10px;overflow:clip;
+  background:var(--papel-warm);
+}
+#la60 /* la fotografía final llena el azulejo: trae su propia luz y su sombra, #la60 así que no necesita ni tinte de fondo ni margen */
+.prod__lienzo img{width:100%;height:100%;object-fit:cover;
+  transition:transform .8s var(--ease)}
+#la60 .prod:hover .prod__lienzo img{transform:scale(1.05)}
+#la60 .prod__tueste{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;opacity:.6}
+#la60 .prod h3{font-family:var(--font-titulo);text-transform:uppercase;font-size:1.45rem;line-height:1;margin:.25rem 0 .4rem}
+#la60 .prod__perfil{font-size:.82rem;font-weight:300;opacity:.8;margin-bottom:1rem;flex:1}
+#la60 .prod__pie{display:flex;align-items:baseline;justify-content:space-between;gap:.6rem;border-top:1.5px solid var(--linea);padding-top:.8rem}
+#la60 .prod__precio{font-family:var(--font-titulo);font-size:1.7rem;line-height:1}
+#la60 .prod__precio--na{opacity:.3;font-size:1.2rem}
+#la60 .prod__g{font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.55}
+#la60 .prod__cinta{
+  position:absolute;top:.9rem;right:-2.6rem;z-index:4;
+  background:var(--rojo);color:var(--papel);
+  padding:.3em 3rem;transform:rotate(38deg);
+  font-size:.56rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+}
+#la60 /* la fotografía de la línea, #la60 cerrando la sección */
+.linea{margin-top:clamp(2.6rem,5vw,4rem)}
+#la60 .linea img{width:100%;height:auto;border-radius:var(--r)}
+#la60 .linea figcaption{
+  margin-top:.9rem;font-family:var(--font-nota);
+  font-size:clamp(1.1rem,1.6vw,1.5rem);line-height:1.25;opacity:.8;
+}
+#la60 .cuidados{display:grid;gap:1.6rem;grid-template-columns:1fr;margin-top:clamp(2.4rem,5vw,3.6rem)}
+@media(min-width:760px){#la60 .cuidados{grid-template-columns:repeat(3,1fr)}}
+#la60 .cuidado{display:flex;gap:1rem;align-items:flex-start}
+#la60 .cuidado__n{font-family:var(--font-titulo);font-size:2.4rem;line-height:.8;color:var(--rojo);flex:none}
+#la60 .cuidado h4{font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.35rem}
+#la60 .cuidado p{font-size:.88rem;font-weight:300;line-height:1.5;opacity:.85}
+#la60 /* ============================================================
+   14 · ATELIER DEL MES
+   ============================================================ */
+.mes{display:grid;gap:clamp(2rem,5vw,4.5rem);grid-template-columns:1fr;align-items:center}
+@media(min-width:900px){#la60 .mes{grid-template-columns:.9fr 1.1fr}}
+#la60 .mes__escena{position:relative;min-height:min(62vh,520px);display:grid;place-items:center}
+#la60 .mes__lista{display:grid;gap:1.2rem;margin-top:2rem;max-width:50ch}
+#la60 .mes__lista div{border-top:1.5px solid var(--linea);padding-top:.85rem}
+#la60 .mes__lista dt{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;opacity:.6;margin-bottom:.25rem}
+#la60 .mes__lista dd{font-weight:300}
+#la60 /* ============================================================
+   15 · GALERÍA VIVA · TATIFER4  (módulo extraíble)
+   ============================================================ */
+.galeria{position:relative}
+#la60 .obras{display:grid;gap:clamp(1.1rem,2.4vw,2.2rem);grid-template-columns:repeat(2,1fr)}
+@media(min-width:820px){#la60 .obras{grid-template-columns:repeat(4,1fr)}}
+#la60 .obra{
+  position:relative;display:block;
+  transition:transform .6s var(--ease),filter .6s var(--ease);
+}
+#la60 .obra:hover{transform:translateY(-18px) rotate(-1.4deg);z-index:5}
+#la60 /* Cada obra flota a su propia altura de reposo. Solo en la rejilla de
+   cuatro columnas: en dos columnas el desfase hace que una tarjeta pise
+   el pie de la de arriba. */
+@media(min-width:820px){
+  .obra:nth-child(4n+1){transform:translateY(-14px)}
+  .obra:nth-child(4n+3){transform:translateY(10px)}
+  .obra:hover{transform:translateY(-24px) rotate(-1.4deg)}
+}
+#la60 .obra__marco{
+  position:relative;border-radius:3px;overflow:clip;
+  background:var(--papel);
+  padding:9px;
+  box-shadow:0 24px 34px -22px rgba(58,58,58,.55);
+  transition:box-shadow .6s var(--ease);
+}
+#la60 .obra:hover .obra__marco{box-shadow:0 42px 52px -26px rgba(58,58,58,.6)}
+#la60 /* La obra nunca se recorta: va contenida sobre un paspartú de papel, #la60 como una pieza montada. Sus formatos son distintos entre sí. */
+.obra__lienzo{
+  aspect-ratio:4/5;position:relative;overflow:clip;border-radius:1px;
+  background:var(--papel-warm);display:grid;place-items:center;
+}
+#la60 .obra__lienzo img{width:100%;height:100%;object-fit:contain;display:block}
+#la60 .obra__pie{display:flex;justify-content:space-between;align-items:baseline;gap:.6rem;margin-top:.8rem}
+#la60 /* en columna estrecha el título y el precio no caben en la misma línea */
+@media(max-width:700px){
+  .obra__pie{display:grid;gap:.4rem;justify-items:start}
+}
+#la60 .obra h3{font-family:var(--font-titulo);text-transform:uppercase;font-size:1.05rem;line-height:1}
+#la60 .obra__med{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;opacity:.55;display:block;margin-top:.25rem}
+#la60 .obra__precio{font-family:var(--font-titulo);font-size:1.2rem;line-height:1;flex:none}
+#la60 .obra__estado{
+  position:absolute;top:.6rem;left:.6rem;z-index:3;
+  background:var(--marcador);color:var(--papel);
+  padding:.24em .7em;border-radius:100px;
+  font-size:.54rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+}
+#la60 .obra__estado--vendida{background:var(--rojo)}
+#la60 .autora{display:grid;gap:clamp(1.6rem,4vw,3.4rem);grid-template-columns:1fr;align-items:center;margin-bottom:clamp(2.6rem,6vw,4.5rem)}
+@media(min-width:900px){#la60 .autora{grid-template-columns:.42fr .58fr}}
+#la60 .autora__retrato{position:relative;border-radius:var(--r);overflow:clip;aspect-ratio:4/5}
+#la60 .autora__retrato img{width:100%;height:100%;object-fit:cover}
+#la60 .autora__firma{font-family:var(--font-arte);font-size:clamp(2rem,4.4vw,3.4rem);line-height:1;color:var(--fucsia);margin-bottom:.4rem}
+#la60 /* ============================================================
+   16 · OBJETOS DE LA CASA
+   ============================================================ */
+.objetos{display:grid;gap:clamp(1rem,2vw,1.6rem);grid-template-columns:repeat(2,1fr)}
+@media(min-width:900px){#la60 .objetos{grid-template-columns:repeat(4,1fr)}}
+#la60 .objeto{
+  border:1.5px solid var(--linea);border-radius:var(--r);
+  padding:1.2rem;background:var(--papel);
+  display:flex;flex-direction:column;gap:.5rem;
+  transition:transform .5s var(--ease),border-color .3s;
+}
+#la60 .objeto:hover{transform:translateY(-8px) rotate(.6deg);border-color:var(--marcador)}
+#la60 .objeto__fig{aspect-ratio:1/1;display:grid;place-items:center;background:var(--tono,var(--papel-warm));border-radius:10px;margin:-.35rem -.35rem .5rem}
+#la60 .objeto__fig svg{width:62%;height:62%}
+#la60 .objeto h3{font-family:var(--font-titulo);text-transform:uppercase;font-size:1.1rem;line-height:1}
+#la60 .objeto p{font-size:.8rem;font-weight:300;opacity:.8;flex:1}
+#la60 .objeto__precio{font-family:var(--font-titulo);font-size:1.25rem}
+#la60 /* ============================================================
+   17 · TALLER
+   ============================================================ */
+.taller{display:grid;gap:clamp(2rem,5vw,4rem);grid-template-columns:1fr;align-items:center}
+@media(min-width:900px){#la60 .taller{grid-template-columns:1.05fr .95fr}}
+#la60 .taller__precios{display:grid;gap:1rem;grid-template-columns:repeat(2,1fr);margin-top:2rem;max-width:34rem}
+#la60 .taller__precio{border:1.5px solid currentColor;border-radius:var(--r);padding:1.1rem 1.2rem}
+#la60 .taller__precio strong{font-family:var(--font-titulo);font-size:2rem;line-height:1;display:block}
+#la60 .taller__precio span{font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;opacity:.75}
+#la60 /* ============================================================
+   18 · EL ESPACIO — mosaico con paralaje
+   ============================================================ */
+.mosaico{display:grid;gap:clamp(.7rem,1.6vw,1.3rem);grid-template-columns:repeat(6,1fr)}
+#la60 .mos{position:relative;overflow:clip;border-radius:var(--r);background:var(--papel-warm)}
+#la60 .mos img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+#la60 .mos:hover img{transform:scale(1.06)}
+#la60 .mos--a{grid-column:span 6;aspect-ratio:4/3}
+#la60 .mos--b{grid-column:span 3;aspect-ratio:3/4}
+#la60 .mos--c{grid-column:span 3;aspect-ratio:3/4}
+#la60 .mos--d{grid-column:span 6;aspect-ratio:16/9}
+@media(min-width:820px){#la60 .mos--a{grid-column:span 4;aspect-ratio:16/11}#la60 .mos--b{grid-column:span 2;aspect-ratio:3/4}#la60 .mos--c{grid-column:span 2;aspect-ratio:3/4}#la60 .mos--d{grid-column:span 4;aspect-ratio:16/11}}
+#la60 .mos__pie{
+  position:absolute;left:.9rem;bottom:.9rem;z-index:3;
+  background:rgba(252,247,242,.9);backdrop-filter:blur(8px);
+  padding:.34em .85em;border-radius:100px;
+  font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--marcador);
+}
+#la60 /* ============================================================
+   19 · VISITA + PIE
+   ============================================================ */
+.visita{display:grid;gap:clamp(2rem,5vw,4rem);grid-template-columns:1fr}
+@media(min-width:900px){#la60 .visita{grid-template-columns:1.1fr .9fr}}
+#la60 .dato{border-top:1.5px solid var(--linea);padding-top:.9rem;margin-bottom:1.6rem}
+#la60 .dato dt{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;opacity:.6;margin-bottom:.3rem}
+#la60 .dato dd{font-size:1.05rem;line-height:1.4}
+#la60 .dato dd a:hover{color:var(--rojo)}
+#la60 .pie{padding-block:clamp(2.5rem,5vw,4rem) 2rem;border-top:1.5px solid var(--linea)}
+#la60 .pie__fila{display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center;justify-content:space-between}
+#la60 .pie__logo{display:block;width:clamp(74px,8vw,104px)}
+#la60 .pie__logo img{width:100%;height:auto}
+#la60 .pie__legal{font-size:.68rem;letter-spacing:.06em;opacity:.55}
+#la60 /* ============================================================
+   20 · ACCESIBILIDAD Y MOVIMIENTO REDUCIDO
+   ============================================================ */
+.salta{position:absolute;left:-9999px;top:0;z-index:99;background:var(--marcador);color:var(--papel);padding:.7em 1.2em;border-radius:0 0 8px 0}
+#la60 .salta:focus{left:0}
+#la60 :focus-visible{outline:2.5px solid var(--rojo);outline-offset:3px;border-radius:4px}
+@media(prefers-reduced-motion:reduce){#la60{scroll-behavior:auto}#la60 *, #la60 *::before, #la60 *::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}#la60 .flota{transform:none!important}#la60 .marq__pista{animation:none}#la60 .rev{opacity:1;transform:none}#la60 .rev-mask{clip-path:none}#la60 .blend{position:relative;min-height:auto}}
+#la60 /* ============================================================
+   21 · CATÁLOGO DE OBRA · obra.html
+   Página aparte: el catálogo de Tatifer4 no corre en el scroll
+   de la portada, #la60 se entra por botón. Cada serie abre con su
+   seccionador y su propio plano de color.
+   ============================================================ */
+.pag-obra{--linea:#E6DCCF}
+#la60 .obra-hero{
+  position:relative;overflow:clip;
+  min-height:min(86svh,720px);
+  display:grid;align-items:center;
+  padding-block:clamp(7rem,15vh,10rem) clamp(4rem,9vh,7rem);
+  background:
+    radial-gradient(110% 80% at 12% 6%,rgba(232,143,168,.34) 0%,rgba(232,143,168,.1) 40%,transparent 66%),
+    radial-gradient(90% 70% at 92% 88%,rgba(167,214,206,.34) 0%,transparent 60%),
+    var(--papel);
+}
+#la60 .obra-hero__cuerpo{position:relative;z-index:5;max-width:60ch;display:grid;gap:1.1rem}
+#la60 .obra-hero__cuerpo .autora__firma{margin:1.2rem 0 -.2rem}
+#la60 /* --- el seccionador de serie ------------------------------- */
+.serie{position:relative;padding-block:clamp(4.5rem,9vw,8rem);z-index:2}
+#la60 .serie > .wrap{position:relative;z-index:5}
+#la60 .seccionador{margin-bottom:clamp(2.6rem,5vw,4.5rem)}
+#la60 .seccionador__nombre{
+  /* más contenido que el t-mega de la portada: es un rótulo, no un titular */
+  font-size:clamp(3rem,9vw,7.5rem);
+  margin:.9rem 0 1.4rem;
+}
+#la60 .seccionador__pie{
+  display:grid;gap:1.4rem clamp(2rem,4vw,4rem);
+  grid-template-columns:1fr;
+  border-top:1.5px solid var(--linea);padding-top:1.2rem;
+}
+@media(min-width:820px){#la60 .seccionador__pie{grid-template-columns:minmax(0,1fr) auto;align-items:start}}
+#la60 .seccionador__pie .nota{max-width:42ch;opacity:.9}
+#la60 .seccionador__datos{display:flex;gap:clamp(1.4rem,3vw,2.6rem)}
+#la60 .seccionador__datos dt{
+  font-size:.62rem;font-weight:700;letter-spacing:.2em;
+  text-transform:uppercase;opacity:.6;margin-bottom:.25rem;
+}
+#la60 .seccionador__datos dd{font-family:var(--font-titulo);font-size:clamp(1.5rem,2.6vw,2.2rem);line-height:1}
+#la60 /* la sombra de la tarjeta necesita más contraste sobre plano oscuro */
+.plano--tinta .obra__marco, #la60 .plano--kinder .obra__marco{box-shadow:0 26px 40px -20px rgba(0,0,0,.5)}
+#la60 /* --- la invitación al catálogo, #la60 en la portada --------------- */
+.pase{
+  display:grid;gap:clamp(1.6rem,3.4vw,3rem);align-items:center;
+  grid-template-columns:1fr;margin-top:clamp(2.6rem,5vw,4rem);
+}
+@media(min-width:900px){#la60 .pase{grid-template-columns:1.15fr .85fr}}
+#la60 .pase__muestra{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem}
+#la60 .pase__muestra img{
+  width:100%;aspect-ratio:4/5;object-fit:contain;
+  background:var(--papel-warm);border-radius:3px;padding:7px;
+  box-shadow:0 18px 26px -18px rgba(46,46,46,.5);
+  transition:transform .5s var(--ease);
+}
+#la60 .pase__muestra a:nth-child(2) img{transform:translateY(-10px)}
+#la60 .pase__muestra a:nth-child(4) img{transform:translateY(8px)}
+#la60 .pase__muestra a:hover img{transform:translateY(-16px) rotate(-1.6deg)}
+#la60 .pase__texto{display:grid;gap:1rem;justify-items:start}
+#la60 .pase__cifra{font-family:var(--font-titulo);font-size:clamp(2.6rem,5vw,4rem);line-height:.9}
+#la60 /* ============================================================
+   22 · RESERVAS · reservas.html
+   Una superficie, #la60 cuatro intenciones. Los campos de la intención
+   que no toca están `hidden`, #la60 no ocultos con display: así el
+   lector de pantalla tampoco los ve.
+   ============================================================ */
+.res-hero{
+  position:relative;overflow:clip;
+  padding-block:clamp(7rem,14vh,9rem) clamp(2.6rem,5vw,4rem);
+  background:
+    radial-gradient(100% 80% at 8% 4%,rgba(227,30,36,.14) 0%,transparent 58%),
+    radial-gradient(90% 70% at 94% 90%,rgba(167,214,206,.34) 0%,transparent 60%),
+    var(--papel);
+}
+#la60 .res-hero__cuerpo{position:relative;z-index:5;display:grid;gap:1.1rem}
+#la60 /* --- la rejilla: formulario + resumen ----------------------- */
+.reserva{display:grid;gap:clamp(1.8rem,3.4vw,3rem);grid-template-columns:1fr;align-items:start}
+@media(min-width:980px){#la60 .reserva{grid-template-columns:minmax(0,1.35fr) minmax(310px,.65fr)}}
+#la60 .reserva__cuerpo{display:grid;gap:clamp(1.8rem,3.4vw,3rem);min-width:0}
+#la60 .paso{border:0}
+#la60 .paso__titulo{
+  display:flex;align-items:center;gap:.7em;padding:0;margin-bottom:1.4rem;
+  font-family:var(--font-titulo);text-transform:uppercase;
+  font-size:clamp(1.3rem,2.2vw,1.9rem);line-height:1;
+}
+#la60 .paso__n{
+  display:inline-grid;place-items:center;flex:none;
+  width:1.5em;height:1.5em;border-radius:50%;
+  background:var(--rojo);color:var(--papel);font-size:.72em;
+}
+#la60 /* --- elegir la intención ----------------------------------- */
+.opciones{display:grid;gap:.8rem;grid-template-columns:1fr}
+@media(min-width:700px){#la60 .opciones{grid-template-columns:repeat(2,1fr)}}
+#la60 .opcion{position:relative;display:block;cursor:pointer}
+#la60 .opcion input{position:absolute;opacity:0;width:0;height:0}
+#la60 .opcion__cuerpo{
+  display:grid;gap:.3rem;height:100%;
+  border:1.5px solid var(--linea);border-radius:var(--r);
+  padding:1.1rem 1.2rem;background:var(--papel);
+  transition:border-color .3s,transform .4s var(--ease),box-shadow .4s var(--ease);
+}
+#la60 .opcion:hover .opcion__cuerpo{transform:translateY(-3px);border-color:var(--marcador)}
+#la60 .opcion.is-elegida .opcion__cuerpo{
+  border-color:var(--rojo);border-width:2.5px;padding:calc(1.1rem - 1px) calc(1.2rem - 1px);
+  box-shadow:0 18px 30px -22px rgba(227,30,36,.6);
+}
+#la60 .opcion input:focus-visible + .opcion__cuerpo{outline:2.5px solid var(--rojo);outline-offset:3px}
+#la60 .opcion__nombre{font-family:var(--font-titulo);text-transform:uppercase;font-size:1.2rem;line-height:1}
+#la60 .opcion__pie{font-size:.86rem;font-weight:300;line-height:1.45;opacity:.8}
+#la60 .opcion__precio{
+  margin-top:.35rem;font-size:.66rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--rojo);
+}
+#la60 /* --- los campos -------------------------------------------- */
+.campos{display:grid;gap:1rem clamp(1rem,2vw,1.6rem);grid-template-columns:1fr;margin-bottom:1.2rem}
+@media(min-width:620px){#la60 .campos{grid-template-columns:repeat(2,1fr)}}
+#la60 .campos[hidden]{display:none}
+#la60 .campo{display:grid;gap:.4rem;min-width:0}
+#la60 .campo--ancho{grid-column:1/-1}
+#la60 .campo > span{font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;opacity:.72}
+#la60 .campo > span em{font-style:normal;opacity:.7;letter-spacing:.1em}
+#la60 .campo input, #la60 .campo select, #la60 .campo textarea{
+  font:inherit;font-size:1rem;color:var(--marcador);
+  background:var(--papel);
+  border:1.5px solid var(--linea);border-radius:10px;
+  padding:.72em .85em;width:100%;
+  transition:border-color .25s;
+}
+#la60 .campo textarea{resize:vertical;line-height:1.5}
+#la60 .campo input:hover, #la60 .campo select:hover, #la60 .campo textarea:hover{border-color:rgba(58,58,58,.4)}
+#la60 .campo input:focus, #la60 .campo select:focus, #la60 .campo textarea:focus{
+  outline:0;border-color:var(--kinder);box-shadow:0 0 0 3px rgba(0,141,137,.16);
+}
+#la60 .campo__ayuda{grid-column:1/-1;font-size:.86rem;opacity:.8}
+#la60 .campo__ayuda a{border-bottom:1.5px solid var(--rojo)}
+#la60 /* --- el resumen -------------------------------------------- */
+.resumen{min-width:0}
+@media(min-width:980px){#la60 .resumen{position:sticky;top:5.5rem}}
+#la60 .resumen__caja{
+  border:1.5px solid var(--marcador);border-radius:var(--r);
+  background:var(--papel-warm);padding:clamp(1.2rem,2.4vw,1.7rem);
+  display:grid;gap:.9rem;
+}
+#la60 .resumen__caja .t-m{margin-bottom:.2rem}
+#la60 .resumen__lista{display:grid;gap:.6rem}
+#la60 .resumen__lista > div{display:grid;grid-template-columns:8.5em 1fr;gap:.6rem;align-items:baseline}
+#la60 .resumen__lista dt{font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;opacity:.6}
+#la60 .resumen__lista dd{font-size:.94rem;line-height:1.35}
+#la60 .resumen__total{
+  display:flex;align-items:baseline;justify-content:space-between;gap:1rem;
+  border-top:1.5px solid var(--linea);padding-top:.9rem;
+}
+#la60 .resumen__total span{font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;opacity:.6}
+#la60 .resumen__total strong{font-family:var(--font-titulo);font-size:clamp(1.8rem,3vw,2.4rem);line-height:1}
+#la60 .resumen__pie{font-family:var(--font-nota);font-size:1.15rem;line-height:1.2;opacity:.8}
+#la60 .resumen__btn{width:100%;justify-content:center}
+#la60 .resumen__aviso{font-size:.78rem;line-height:1.45;opacity:.72}
+#la60 .resumen__senal{
+  font-size:.8rem;font-weight:700;color:var(--kinder-dark);
+  background:rgba(167,214,206,.4);border-radius:8px;padding:.5em .7em;
+}
+#la60 .lista-saber{display:grid;gap:.7rem;margin-top:.4rem}
+#la60 .lista-saber li{list-style:none;position:relative;padding-left:1.2rem;font-weight:300;font-size:.94rem;line-height:1.5}
+#la60 .lista-saber li::before{content:'';position:absolute;left:0;top:.6em;width:6px;height:6px;border-radius:50%;background:var(--rojo)}
+#la60 /* ============================================================
+   23 · FEBRULLAGE YUCATÁN · februllage.html
+   Mismo sistema, #la60 otra cara: la portada va sobre kinder con
+   formas de papel recortado — círculos, #la60 anillo, #la60 polígonos — en
+   menta, #la60 mostaza, #la60 rosa y rojo. Sin fotos de la cafetería.
+   ============================================================ */
+.pag-febru{--linea:#E6DCCF}
+#la60 /* la pestaña del 393 es kinder, #la60 y la portada también: aquí va en rojo */
+.pag-febru .tab393{background:var(--rojo)}
+#la60 .pag-febru .tab393:hover{background:var(--marcador)}
+#la60 .febru-hero{
+  position:relative;overflow:clip;min-height:min(94svh,760px);
+  display:grid;align-items:center;
+  padding-block:clamp(7rem,15vh,10rem) clamp(3rem,7vh,5rem);
+  background:var(--kinder);color:var(--papel);
+  --linea:rgba(252,247,242,.24);--btn-fill:#FCF7F2;--btn-txt:#008D89;
+}
+#la60 /* Sin max-width en el contenedor: es una rejilla, #la60 y el titular de una sola
+   palabra fuerza el ancho de la pista — todo lo demás se estiraba con él y
+   se metía bajo la pestaña lateral. La medida se pone en el texto. */
+.febru-hero__cuerpo{position:relative;z-index:8;display:grid;gap:1.1rem;justify-items:start}
+#la60 .febru-hero__cuerpo .lead{max-width:50ch}
+#la60 .febru-hero__cuerpo .eyebrow{max-width:100%}
+#la60 .febru-hero__nombre{
+  font-size:clamp(3rem,11vw,9.5rem);line-height:.84;margin:.8rem 0 0;
+}
+#la60 .febru-hero__sub{
+  font-family:var(--font-cuerpo);font-weight:700;
+  font-size:clamp(.82rem,1.5vw,1.05rem);
+  letter-spacing:.3em;text-transform:uppercase;
+}
+#la60 .febru-hero__fechas{
+  display:flex;align-items:baseline;gap:.5rem;flex-wrap:wrap;
+  font-family:var(--font-titulo);line-height:1;margin-top:.6rem;
+}
+#la60 .febru-hero__fechas span{font-size:clamp(2.6rem,6vw,4.6rem)}
+#la60 .febru-hero__fechas i{
+  display:inline-block;width:clamp(1.4rem,3vw,2.6rem);height:3px;
+  background:var(--mostaza);border-radius:2px;
+  position:relative;top:-.5em;
+}
+#la60 .febru-hero__fechas em{
+  font-family:var(--font-nota);font-style:normal;
+  font-size:clamp(1.2rem,2vw,1.7rem);margin-left:.4rem;opacity:.92;
+}
+#la60 /* las formas de papel de la portada */
+.f-c1{--x:-6%;--y:6%;--w:min(26vw,320px);--depth:.6;--rot:0deg;--dur:19s;--amp:14px;--z:1}
+#la60 .f-c2{--x:74%;--y:2%;--w:min(22vw,260px);--depth:.9;--rot:12deg;--dur:16s;--delay:-4s;--amp:16px;--z:1}
+#la60 .f-c3{--x:84%;--y:52%;--w:min(17vw,200px);--depth:1.5;--rot:-9deg;--dur:13s;--delay:-6s;--amp:18px;--z:2}
+#la60 .f-c4{--x:37%;--y:80%;--w:min(24vw,210px);--depth:1.9;--rot:14deg;--dur:11s;--delay:-2s;--amp:20px;--z:2}
+#la60 .f-c5{--x:62%;--y:80%;--w:min(15vw,170px);--depth:1.3;--rot:-6deg;--dur:17s;--delay:-8s;--amp:15px;--z:1;opacity:.9}
+@media(max-width:899px){#la60 .f-c4{--x:62%;--y:84%;--w:38vw;--depth:1.6}}
+#la60 /* --- tablas del programa ------------------------------------ */
+.tabla-envoltorio{overflow-x:auto;margin-top:clamp(2rem,4vw,3rem)}
+#la60 .tabla-programa{width:100%;border-collapse:collapse;text-align:left;min-width:34rem}
+#la60 .tabla-programa caption{
+  font-family:var(--font-nota);font-size:clamp(1.2rem,2vw,1.6rem);
+  text-align:left;margin-bottom:.8rem;opacity:.85;
+}
+#la60 .tabla-programa th, #la60 .tabla-programa td{
+  padding:.95rem 1rem .95rem 0;border-bottom:1.5px solid var(--linea);
+  vertical-align:top;
+}
+#la60 .tabla-programa thead th{
+  font-family:var(--font-cuerpo);font-size:.62rem;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;opacity:.6;
+  border-bottom-width:2.5px;
+}
+#la60 .tabla-programa tbody th{
+  font-family:var(--font-titulo);text-transform:uppercase;
+  font-size:1.05rem;line-height:1.1;white-space:nowrap;padding-right:2rem;
+}
+#la60 .tabla-programa td{font-weight:300;line-height:1.5}
+#la60 .tabla-programa--rondas{min-width:46rem;font-size:.92rem}
+#la60 .tabla-programa--rondas tbody th{font-size:.92rem}
+#la60 /* --- recuadro sobre plano de color --------------------------- */
+.recuadro--sobre-color{background:rgba(252,247,242,.1);border-color:rgba(252,247,242,.3)}
+#la60 .talleres{display:grid;gap:.55rem;padding-left:1.3rem}
+#la60 .talleres li{font-weight:300;line-height:1.5}
+#la60 .talleres li b{font-weight:700}
+#la60 /* --- dinámica A --------------------------------------------- */
+.dinamica{display:grid;gap:clamp(1.8rem,4vw,3.4rem);grid-template-columns:1fr;align-items:start}
+@media(min-width:900px){#la60 .dinamica{grid-template-columns:.9fr 1.1fr}}
+#la60 .preguntas{display:grid;gap:.1rem;counter-reset:p;list-style:none}
+#la60 .preguntas li{
+  counter-increment:p;position:relative;
+  padding:.85rem 0 .85rem 3.2rem;
+  border-top:1.5px solid var(--linea);
+  font-size:1.02rem;line-height:1.4;
+}
+#la60 .preguntas li:last-child{border-bottom:1.5px solid var(--linea)}
+#la60 .preguntas li::before{
+  content:counter(p,decimal-leading-zero);
+  position:absolute;left:0;top:.85rem;
+  font-family:var(--font-titulo);font-size:1.05rem;color:var(--rojo);
+}
+#la60 /* --- ficha de la dinámica B ---------------------------------- */
+.ficha-dinamica{display:grid;gap:1.2rem clamp(1.6rem,3vw,3rem);grid-template-columns:1fr;margin-top:2rem}
+@media(min-width:700px){#la60 .ficha-dinamica{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1040px){#la60 .ficha-dinamica{grid-template-columns:repeat(4,1fr)}}
+#la60 .ficha-dinamica > div{border-top:1.5px solid var(--linea);padding-top:.9rem}
+#la60 .ficha-dinamica dt{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;opacity:.65;margin-bottom:.3rem}
+#la60 .ficha-dinamica dd{font-size:1rem;line-height:1.35}
+#la60 /* --- artistas ------------------------------------------------ */
+.artistas{display:grid;gap:0;grid-template-columns:1fr;list-style:none;margin-top:clamp(2rem,4vw,3rem)}
+@media(min-width:620px){#la60 .artistas{grid-template-columns:repeat(2,1fr);column-gap:clamp(1.6rem,3vw,3rem)}}
+@media(min-width:1040px){#la60 .artistas{grid-template-columns:repeat(3,1fr)}}
+#la60 .artista{
+  display:flex;align-items:baseline;gap:.75rem;
+  padding:.8rem 0;border-bottom:1.5px solid var(--linea);
+}
+#la60 .artista__n{
+  font-family:var(--font-titulo);font-size:.82rem;
+  color:var(--rojo);flex:none;width:2ch;
+}
+#la60 .artista b{font-weight:400;font-size:1.05rem;line-height:1.25}
+#la60 .artista em{
+  font-style:normal;margin-left:auto;padding-left:.8rem;
+  font-size:.62rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;opacity:.55;text-align:right;
+}
+#la60 .artista--casa b{font-weight:700}
+#la60 .artista--casa .artista__n{color:var(--kinder)}
+#la60 /* --- niveles de alianza -------------------------------------- */
+.niveles{display:grid;gap:clamp(1rem,2vw,1.6rem);grid-template-columns:1fr;margin-top:clamp(2.4rem,5vw,3.6rem)}
+@media(min-width:860px){#la60 .niveles{grid-template-columns:repeat(3,1fr)}}
+#la60 .nivel{
+  border:1.5px solid var(--linea);border-radius:var(--r);
+  padding:1.3rem 1.4rem;display:grid;gap:.7rem;align-content:start;
+  transition:border-color .3s,transform .45s var(--ease);
+}
+#la60 .nivel:hover{transform:translateY(-5px);border-color:currentColor}
+#la60 .nivel h3{font-family:var(--font-titulo);text-transform:uppercase;font-size:1.25rem;line-height:1}
+#la60 .nivel__aporta, #la60 .nivel__recibe{font-size:.9rem;font-weight:300;line-height:1.45}
+#la60 .nivel__aporta{padding-bottom:.7rem;border-bottom:1.5px solid var(--linea)}
+#la60 .nivel__recibe{opacity:.82}
+#la60 /* --- marcas de lo que falta ---------------------------------- */
+.pendiente{
+  background:rgba(227,30,36,.12);color:inherit;
+  border-bottom:1.5px dashed var(--rojo);
+  padding:.05em .25em;border-radius:3px;
+}
+#la60 .enlace{border-bottom:1.5px solid var(--rojo)}
+#la60 .enlace:hover{color:var(--rojo)}
+#la60 .visualmente-oculto{
+  position:absolute;width:1px;height:1px;overflow:hidden;
+  clip-path:inset(50%);white-space:nowrap;
+}
+/* El bloque se despega del ancho de la fila de GHL y ocupa la pantalla. */
+#la60{ margin-left: calc(50% - 50vw); width: 100vw; max-width: 100vw; }
+/* Y se aísla del CSS de GHL en los dos sentidos. */
+#la60, #la60 *, #la60 *::before, #la60 *::after{ box-sizing: border-box; }
+#la60 p, #la60 h1, #la60 h2, #la60 h3, #la60 h4, #la60 ul, #la60 ol, #la60 figure{ margin: 0; }
+#la60 img{ max-width: 100%; height: auto; display: block; }
+#la60 a{ text-decoration: none; }
+
+</style>
+
+<div id="la60">
+<a class="salta" href="#que-es">Saltar al contenido</a>
+
+<nav class="nav" aria-label="Principal">
+  <div class="nav__grupo">
+    <a class="pill pill--marca" href="#inicio">Februllage Yucatán</a>
+  </div>
+  <div class="nav__grupo nav__links">
+    <a class="pill" href="#programa">Programa</a>
+    <a class="pill" href="#dinamicas">Dinámicas</a>
+    <a class="pill" href="#artistas">Artistas</a>
+    <a class="pill" href="#aliados">Aliados</a>
+  </div>
+  <div class="nav__grupo">
+    <a class="pill pill--acento" href="#participar">Participar</a>
+  </div>
+</nav>
+<a class="tab393" href="/" aria-label="LA 60 Café Atelier, sede del festival">LA 60</a>
+
+<!-- ============================================================
+     PORTADA
+     Formas de papel recortado sobre kinder, según el sistema.
+     Sin fotos de la cafetería: solo papel y obra.
+     ============================================================ -->
+<header class="febru-hero escena" id="inicio" data-raton="20">
+  <div class="flota solo-md f-c1" data-scroll="120"><div class="flota__i">
+    <svg viewBox="0 0 200 200" role="presentation"><circle cx="100" cy="100" r="98" fill="#A7D6CE"/></svg>
+  </div></div>
+  <div class="flota solo-md f-c2" data-scroll="180"><div class="flota__i">
+    <svg viewBox="0 0 200 200" role="presentation"><circle cx="100" cy="100" r="80" fill="none" stroke="#C89B2E" stroke-width="34"/></svg>
+  </div></div>
+  <div class="flota solo-md f-c3" data-scroll="210"><div class="flota__i">
+    <svg viewBox="0 0 200 180" role="presentation"><path d="M100 4 196 174 4 174Z" fill="#E88FA8"/></svg>
+  </div></div>
+  <div class="flota f-c4" data-scroll="240"><div class="flota__i">
+    <svg viewBox="0 0 200 110" role="presentation"><path d="M2 108a98 98 0 0 1 196 0Z" fill="#E31E24"/></svg>
+  </div></div>
+  <div class="flota solo-md f-c5" data-scroll="150"><div class="flota__i">
+    <svg viewBox="0 0 200 150" role="presentation"><path d="M6 14 192 4 196 138 10 146Z" fill="#FCF7F2"/></svg>
+  </div></div>
+
+  <div class="wrap febru-hero__cuerpo">
+    <p class="eyebrow rev">Primera edición · Mérida, Yucatán</p>
+    <h1 class="t-mega febru-hero__nombre rev" data-d="1">Februllage</h1>
+    <p class="febru-hero__sub rev" data-d="1">Festival Internacional de Collage</p>
+    <p class="febru-hero__fechas rev" data-d="2">
+      <span>15</span><i></i><span>21</span>
+      <em>de febrero de 2027</em>
+    </p>
+    <p class="lead rev" data-d="3">
+      Una semana de talleres, encuentros de comunidad, exposición y fiesta de cierre,
+      con sede en LA 60 Café Atelier.
+    </p>
+    <div class="hero__cta rev" data-d="4" style="justify-content:flex-start">
+      <a class="btn btn--rojo" href="#participar"><span>Quiero participar</span></a>
+      <a class="btn btn--linea" href="#programa"><span>Ver el programa</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="marq marq--kinder" aria-hidden="true" style="--vel:30s">
+  <div class="marq__pista">
+    <div class="marq__grupo">
+      <span class="marq__item">Recortar</span><i class="marq__punto"></i>
+      <span class="marq__item">Superponer</span><i class="marq__punto"></i>
+      <span class="marq__item">Pegar</span><i class="marq__punto"></i>
+      <span class="marq__item">Februllage Yucatán 2027</span><i class="marq__punto"></i>
+    </div>
+    <div class="marq__grupo">
+      <span class="marq__item">Recortar</span><i class="marq__punto"></i>
+      <span class="marq__item">Superponer</span><i class="marq__punto"></i>
+      <span class="marq__item">Pegar</span><i class="marq__punto"></i>
+      <span class="marq__item">Februllage Yucatán 2027</span><i class="marq__punto"></i>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     QUÉ ES
+     ============================================================ -->
+<section class="sec" id="que-es">
+  <div class="wrap">
+    <p class="eyebrow rev">01 — Qué es</p>
+    <h2 class="t-xl rev" data-d="1" style="margin:1.4rem 0 1.6rem;max-width:17ch">Un lenguaje accesible, manual y colectivo</h2>
+    <p class="lead rev" data-d="2" style="max-width:62ch">
+      Februllage Yucatán es el primer festival internacional de collage en Mérida: una semana
+      de talleres, encuentros de comunidad, exposición y fiesta de cierre. Reúne a artistas
+      locales y de otros países en torno a un lenguaje accesible, manual y colectivo, y busca
+      aliados que lo hagan posible.
+    </p>
+
+    <div class="cifras" style="margin-top:clamp(3rem,6vw,5rem)">
+      <div class="cifra rev" data-d="1">
+        <p class="cifra__n">7<em>días</em></p>
+        <p>Del lunes 15 al domingo 21 de febrero de 2027. Talleres entre semana, exposición
+          el fin de semana y fiesta de cierre.</p>
+      </div>
+      <div class="cifra rev" data-d="2">
+        <p class="cifra__n">19<em>+</em></p>
+        <p>Artistas convocados hasta ahora, de México, Estados Unidos y Ecuador. La lista
+          sigue abierta.</p>
+      </div>
+      <div class="cifra rev" data-d="3">
+        <p class="cifra__n">393</p>
+        <p>Calle 60 № 393, Centro. LA 60 Café Atelier es la sede principal, con sedes aliadas
+          por confirmar.</p>
+      </div>
+    </div>
+
+    <div class="recuadro rev" data-d="2">
+      <span class="recuadro__sello">Quién organiza</span>
+      <p class="lead" style="max-width:62ch">
+        Organiza <b>LA 60 Café Atelier</b>, con <b>Tatifer</b> como artista residente.
+        <a class="enlace" href="/obra">Ver su obra →</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROGRAMA
+     ============================================================ -->
+<section class="sec plano plano--kinder plano--corte" id="programa">
+  <div class="wrap">
+    <p class="eyebrow rev">02 — Programa</p>
+    <h2 class="t-xl rev" data-d="1" style="margin:1.4rem 0 1.2rem;max-width:14ch">La semana</h2>
+    <p class="lead mut rev" data-d="2" style="max-width:54ch">
+      Cinco días de taller y dinámicas en vivo, un fin de semana de exposición abierta
+      y una fiesta para cerrar.
+    </p>
+
+    <div class="tabla-envoltorio rev" data-d="3">
+      <table class="tabla-programa">
+        <caption class="visualmente-oculto">Programa de la semana del festival</caption>
+        <thead>
+          <tr><th scope="col">Días</th><th scope="col">Actividad</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Lunes a viernes</th>
+            <td>Talleres, encuentros de la comunidad y dinámicas en vivo con los artistas</td>
+          </tr>
+          <tr>
+            <th scope="row">Sábado y domingo</th>
+            <td>Exposición abierta al público</td>
+          </tr>
+          <tr>
+            <th scope="row">Domingo por la noche</th>
+            <td>Fiesta de cierre</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="recuadro recuadro--sobre-color rev" data-d="2">
+      <span class="recuadro__sello">Talleres · propuesta</span>
+      <p style="margin-bottom:1rem">Un taller por día, de lunes a viernes:</p>
+      <ol class="talleres">
+        <li><b>Collage análogo</b> — recorte y composición</li>
+        <li><b>Papel y textura</b></li>
+        <li><b>Collage digital</b></li>
+        <li><b>Libro de artista</b></li>
+        <li><b>Collage colectivo</b></li>
+      </ol>
+      <p class="small" style="margin-top:1rem;opacity:.8">
+        Está por decidirse si los ejercicios que propongan los artistas se suman a estos
+        cinco talleres o los sustituyen.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     DINÁMICAS
+     ============================================================ -->
+<section class="sec" id="dinamicas">
+  <div class="wrap">
+    <p class="eyebrow rev">03 — Dinámicas en vivo</p>
+    <h2 class="t-xl rev" data-d="1" style="margin:1.4rem 0 2.4rem;max-width:16ch">Dos formas de estar</h2>
+  </div>
+
+  <!-- ---------- A · diez preguntas ---------- -->
+  <div class="wrap dinamica">
+    <div class="dinamica__texto">
+      <p class="eyebrow rev">Dinámica A</p>
+      <h3 class="t-l rev" data-d="1" style="margin:.9rem 0 1.1rem">Diez preguntas en vivo</h3>
+      <p class="lead rev" data-d="2" style="max-width:48ch">
+        Cada artista que expone o visita responde las mismas diez preguntas, en vivo, una
+        sesión por día. Se graba para podcast e Instagram.
+      </p>
+      <p class="small mut rev" data-d="3" style="max-width:48ch;margin-top:1rem">
+        Un bloque por día de lunes a viernes. Respuestas de uno o dos minutos. Una grabación,
+        tres usos: en vivo, audio completo y clips cortos. La última pregunta cierra.
+      </p>
+    </div>
+    <ol class="preguntas rev" data-d="2">
+      <li>¿Cómo te llamas y desde dónde haces collage?</li>
+      <li>¿Cómo empezaste?</li>
+      <li>¿Qué materiales no pueden faltar en tu mesa?</li>
+      <li>¿De dónde sacas tus imágenes?</li>
+      <li>¿Cómo sabes que una pieza está terminada?</li>
+      <li>Cuéntanos la obra que traes al festival.</li>
+      <li>¿Qué te ha enseñado cortar y pegar?</li>
+      <li>¿Quién o qué cambió tu manera de mirar?</li>
+      <li>¿Qué le dirías a alguien que nunca ha hecho un collage?</li>
+      <li>¿Qué es el collage para ti, en una frase?</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ---------- B · compón con lo que el otro agregó ---------- -->
+<section class="sec plano plano--menta plano--corte-sup" id="compon">
+  <div class="wrap">
+    <p class="eyebrow rev">Dinámica B</p>
+    <h2 class="t-xl rev" data-d="1" style="margin:1.4rem 0 1.2rem;max-width:18ch">Compón con lo que el otro agregó</h2>
+    <p class="lead rev" data-d="2" style="max-width:56ch">
+      Ejercicio colectivo con público, guiado por un artista. Nadie corrige ni responde:
+      cada quien compone con lo que ya hay en la hoja.
+    </p>
+
+    <dl class="ficha-dinamica rev" data-d="3">
+      <div><dt>Duración</dt><dd>60 a 75 min</dd></div>
+      <div><dt>Cupo</dt><dd>12 a 16 personas, en círculo</dd></div>
+      <div><dt>Nivel</dt><dd>Sin experiencia</dd></div>
+      <div><dt>Se lleva el público</dt><dd>Su hoja intervenida y la foto de la obra grupal</dd></div>
+    </dl>
+
+    <div class="tabla-envoltorio rev" data-d="2" style="margin-top:clamp(2.4rem,5vw,3.6rem)">
+      <table class="tabla-programa tabla-programa--rondas">
+        <caption>Recorrido de ejemplo</caption>
+        <thead>
+          <tr>
+            <th scope="col">Momento</th><th scope="col">Tiempo</th>
+            <th scope="col">Frase guía</th><th scope="col">Qué hace el grupo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Inicio</th><td>5 min</td>
+            <td>Busca una figura que reconozcas: un rostro, un animal, un objeto.</td>
+            <td>Recorta una pieza figurativa y la pega en su hoja</td></tr>
+          <tr><th scope="row">Ronda 1</th><td>3 min</td>
+            <td>…y dale un lugar a esa figura.</td>
+            <td>Construye el entorno de la hoja que recibe</td></tr>
+          <tr><th scope="row">Ronda 2</th><td>3 min</td>
+            <td>…y busca dónde se rompe el equilibrio.</td>
+            <td>Añade algo que crea asimetría</td></tr>
+          <tr><th scope="row">Ronda 3</th><td>3 min</td>
+            <td>…y completa lo que quedó abierto.</td>
+            <td>Cierra o compensa lo que ve incompleto</td></tr>
+          <tr><th scope="row">Ronda 4</th><td>3 min</td>
+            <td>…y piensa cómo se sentiría al tocarla.</td>
+            <td>Añade una textura</td></tr>
+          <tr><th scope="row">Ronda 5</th><td>3 min</td>
+            <td>…y deja que cambie tu idea inicial.</td>
+            <td>Integra lo que ya trae la hoja</td></tr>
+          <tr><th scope="row">Regreso</th><td>3 min</td>
+            <td>Tu hoja vuelve. Compón con todo lo que le agregaron.</td>
+            <td>Retoque final de la hoja original</td></tr>
+          <tr><th scope="row">Cierre</th><td>25 min</td>
+            <td>Cuenta de dónde partió tu hoja y en qué se convirtió.</td>
+            <td>Montaje en el muro y una frase por persona</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small mut rev" style="margin-top:.9rem">
+      Cada ronda abre con el mismo estribillo — «Compón con lo que el otro agregó» — seguido
+      de la frase de esa ronda.
+    </p>
+
+    <div class="recuadro rev" data-d="2">
+      <span class="recuadro__sello">Las reglas</span>
+      <ol class="lista-saber" style="counter-reset:r">
+        <li>Se trabaja en silencio durante las rondas.</li>
+        <li>Se puede añadir, recortar, rasgar o cubrir parte de la hoja.</li>
+        <li>Lo que otra persona ya pegó no se retira: se integra a la composición.</li>
+        <li>Al sonar el temporizador, la hoja pasa a la izquierda, sin comentarios.</li>
+        <li>Al final, cada hoja vuelve a su dueño y se une a las demás en la obra grupal.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ARTISTAS
+     ============================================================ -->
+<section class="sec escena" id="artistas" data-raton="10">
+  <div class="flota solo-md" data-scroll="170"
+       style="--x:88%;--y:4%;--w:clamp(70px,8vw,120px);--depth:2;--rot:9deg;--dur:12s;--amp:16px;--z:1;opacity:.5">
+    <div class="flota__i"><svg viewBox="0 0 200 200" role="presentation"><circle cx="100" cy="100" r="98" fill="#E88FA8"/></svg></div>
+  </div>
+
+  <div class="wrap">
+    <p class="eyebrow rev">04 — Artistas</p>
+    <h2 class="t-xl rev" data-d="1" style="margin:1.4rem 0 1.2rem;max-width:16ch">Quiénes cortan y pegan</h2>
+    <p class="lead mut rev" data-d="2" style="max-width:54ch">
+      Artistas que ya colaboran con Tatifer. La lista sigue abierta: faltan nombres por
+      sumar y confirmar quién expone y quién propone ejercicio.
+    </p>
+
+    <ul class="artistas rev" data-d="3">
+      <li class="artista"><span class="artista__n">01</span><b>Damariz Aispuro</b><em>TJ</em></li>
+      <li class="artista"><span class="artista__n">02</span><b>Curtis Bergesen</b><em>EUA</em></li>
+      <li class="artista"><span class="artista__n">03</span><b>Pablo Castañeda</b><em>MXL</em></li>
+      <li class="artista"><span class="artista__n">04</span><b>Ces Larrea</b><em>CDMX</em></li>
+      <li class="artista"><span class="artista__n">05</span><b>Germania Cuesta</b><em>ECU</em></li>
+      <li class="artista"><span class="artista__n">06</span><b>Omar Elip</b><em>OAX</em></li>
+      <li class="artista"><span class="artista__n">07</span><b>Garzo</b><em>CDMX</em></li>
+      <li class="artista"><span class="artista__n">08</span><b>Ezequiel Guido</b><em>CDMX</em></li>
+      <li class="artista"><span class="artista__n">09</span><b>Venus Hermeneuta</b><em>CDMX</em></li>
+      <li class="artista"><span class="artista__n">10</span><b>Erotic Hollow</b><em>CDMX</em></li>
+      <li class="artista"><span class="artista__n">11</span><b>Monica McCumber</b><em>CVA</em></li>
+      <li class="artista"><span class="artista__n">12</span><b>Beatriz Paz Jiménez</b><em>CDMX</em></li>
+      <li class="artista"><span class="artista__n">13</span><b>Petra</b><em>GDL</em></li>
+      <li class="artista"><span class="artista__n">14</span><b>Fernando Romo</b><em>MXL</em></li>
+      <li class="artista"><span class="artista__n">15</span><b>Libertad Salgado</b><em>OAX</em></li>
+      <li class="artista artista--casa"><span class="artista__n">16</span><b>Tatifer</b><em>MDA · artista residente</em></li>
+      <li class="artista"><span class="artista__n">17</span><b>Rosenda Wilde</b><em>OAX</em></li>
+      <li class="artista"><span class="artista__n">18</span><b>Madame Collage</b><em>[origen por confirmar]</em></li>
+      <li class="artista"><span class="artista__n">19</span><b>Cintia Constra</b><em>[origen por confirmar] · invitada</em></li>
+    </ul>
+
+    <p class="nota rev" style="margin-top:2.2rem;max-width:46ch">
+      Dos de ellos vienen de fuera de México y sostienen lo internacional del festival.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     EN CONSTRUCCIÓN
+     ============================================================ -->
+<section class="sec sec--tight plano plano--warm" id="mas">
+  <div class="wrap">
+    <p class="eyebrow rev">05 — También en marcha</p>
+    <h2 class="t-l rev" data-d="1" style="margin:1.2rem 0 2.4rem;max-width:24ch">Tres frentes que se están armando</h2>
+    <div class="cols3">
+      <div class="col-nota rev" data-d="1">
+        <h3>Arte + Espacio</h3>
+        <p>Encuentro con arquitectos, constructores, diseñadores de interiores y marcas que
+          buscan obra para sus proyectos, dentro de la exposición: recorrido guiado con ficha
+          por pieza y mesas por tipo de proyecto.</p>
+      </div>
+      <div class="col-nota rev" data-d="2">
+        <h3>Catálogo de enmarcado</h3>
+        <p>Un catálogo de enmarcado para collage, Tatifer × LA 60, con una empresa de
+          enmarcado como aliada oficial de la categoría.</p>
+      </div>
+      <div class="col-nota rev" data-d="3">
+        <h3>Un lugar cada día</h3>
+        <p>Siete lugares para comer, uno por día: la mesa del festival. Los artistas comen
+          ahí tras su bloque en vivo y el público puede ir.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ALIADOS
+     ============================================================ -->
+<section class="sec plano plano--tinta plano--corte" id="aliados">
+  <div class="wrap">
+    <p class="eyebrow rev">06 — Aliados</p>
+    <h2 class="t-xl rev" data-d="1" style="margin:1.4rem 0 1.2rem;max-width:18ch">Lo que hace falta para que ocurra</h2>
+    <p class="lead rev" data-d="2" style="max-width:54ch">
+      El collage se hace con papel, tijeras y pegamento. Buscamos aliados que aporten
+      material, espacio, hospedaje o difusión.
+    </p>
+
+    <div class="niveles">
+      <article class="nivel rev" data-d="1">
+        <h3>Aliado en especie</h3>
+        <p class="nivel__aporta">Papel, revistas, material, impresión, hospedaje o espacio</p>
+        <p class="nivel__recibe">Logo en impresos y digital, mención en redes y en la inauguración</p>
+      </article>
+      <article class="nivel rev" data-d="2">
+        <h3>Aliado institucional</h3>
+        <p class="nivel__aporta">Sede, difusión, permisos o inclusión en agenda cultural</p>
+        <p class="nivel__recibe">Reconocimiento como aliado cultural, presencia en la expo y comunicados</p>
+      </article>
+      <article class="nivel rev" data-d="3">
+        <h3>Aliado principal</h3>
+        <p class="nivel__aporta">Aportación mayor, en especie o económica</p>
+        <p class="nivel__recibe">Todo lo anterior, más su nombre asociado a un taller, la expo o la fiesta</p>
+      </article>
+    </div>
+
+    <p class="small mut rev" style="margin-top:1.6rem;max-width:52ch">
+      Las marcas aliadas aparecen también en las transmisiones en vivo y en los clips
+      que se graban durante la semana.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     PARTICIPAR
+     ============================================================ -->
+<section class="sec" id="participar">
+  <div class="wrap visita">
+    <div>
+      <p class="eyebrow rev">07 — Participar</p>
+      <h2 class="t-xl rev" data-d="1" style="margin:1.4rem 0 1.2rem;max-width:16ch">Te queremos dentro</h2>
+      <p class="lead rev" data-d="2" style="max-width:48ch">
+        Si haces collage, si tienes un espacio, si vendes papel o si quieres sentarte a
+        cortar sin haberlo hecho nunca: hay sitio. Escríbenos y te contamos cómo.
+      </p>
+      <div class="hero__cta rev" data-d="3" style="justify-content:flex-start;margin-top:2rem">
+        <a class="btn btn--rojo" href="mailto:[correo del festival]"><span>Escribir al festival</span></a>
+        <a class="btn btn--linea" href="/"><span>Conocer LA 60</span></a>
+      </div>
+    </div>
+    <dl>
+      <div class="dato rev" data-d="1">
+        <dt>Cuándo</dt>
+        <dd>Lunes 15 a domingo 21 de febrero de 2027</dd>
+      </div>
+      <div class="dato rev" data-d="2">
+        <dt>Dónde</dt>
+        <dd>LA 60 Café Atelier · Calle 60 № 393 × 43 y 45<br>Centro, Mérida, Yucatán</dd>
+      </div>
+      <div class="dato rev" data-d="3">
+        <dt>Sedes aliadas</dt>
+        <dd>Municipio, gobierno del estado y <span class="pendiente">[galería de la calle 60]</span></dd>
+      </div>
+      <div class="dato rev" data-d="4">
+        <dt>Contacto</dt>
+        <dd><span class="pendiente">[correo]</span> · <a href="https://wa.me/529996226722">999 622 6722</a><br>
+          <span class="pendiente">[Instagram del festival]</span></dd>
+      </div>
+      <div class="dato rev" data-d="4">
+        <dt>Artistas · fecha límite</dt>
+        <dd><span class="pendiente">[fecha límite de propuestas]</span></dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<footer class="pie">
+  <div class="wrap pie__fila">
+    <a class="pie__logo" href="/">
+      <img src="https://archivos.la60cafeatelier.com/assets/img/logo-tinta.webp" alt="LA 60 · Café Atelier · 393"
+           width="661" height="900" loading="lazy">
+    </a>
+    <p class="pie__legal">© <span data-anio>2027</span> Februllage Yucatán · Organiza LA 60 Café
+      Atelier, con Tatifer como artista residente · Mérida, Yucatán</p>
+  </div>
+</footer>
+</div>
+
+<script>
+
+/* ------------------------------------------------------------------
+   Arreglo para GoHighLevel.
+
+   GHL mete el código dentro de varias cajas con su propio ancho,
+   su padding y, a veces, overflow o transform. El overflow y el
+   transform de cualquier antecesor anulan el position:sticky de los
+   blends, que es el efecto que sostiene esa parte del sitio.
+
+   Esto sube desde #la60 hasta body y los va limpiando. Se ejecuta
+   también al redibujar, porque el editor de GHL vuelve a aplicar
+   sus estilos cuando guardas.
+   ------------------------------------------------------------------ */
+(function () {
+  function libera() {
+    var n = document.getElementById('la60');
+    if (!n) return;
+    for (var p = n.parentElement; p && p !== document.body; p = p.parentElement) {
+      var e = getComputedStyle(p);
+      if (e.overflow !== 'visible')  p.style.setProperty('overflow', 'visible', 'important');
+      if (e.transform !== 'none')    p.style.setProperty('transform', 'none', 'important');
+      if (e.filter !== 'none')       p.style.setProperty('filter', 'none', 'important');
+      if (e.contain !== 'none')      p.style.setProperty('contain', 'none', 'important');
+      if (e.perspective !== 'none')  p.style.setProperty('perspective', 'none', 'important');
+      p.style.setProperty('max-width', 'none', 'important');
+      p.style.setProperty('padding-left', '0', 'important');
+      p.style.setProperty('padding-right', '0', 'important');
+    }
+    document.documentElement.style.setProperty('overflow-x', 'clip');
+  }
+  libera();
+  addEventListener('load', libera);
+  new MutationObserver(libera).observe(document.documentElement,
+    { attributes: true, subtree: true, attributeFilter: ['style', 'class'] });
+})();
+
+/* ============================================================
+   LA 60 · DATOS COMPARTIDOS
+   ------------------------------------------------------------
+   Una sola fuente para lo que se vende. Lo usan el catálogo
+   (obra.js) y las reservas (reservas.js): así un precio no vive
+   en dos sitios distintos.
+
+   Las rutas de imagen van COMPLETAS. Si se arman por partes, el
+   empaquetador no las encuentra y el paquete sale sin imágenes.
+   ============================================================ */
+window.LA60 = (() => {
+  'use strict';
+
+  /* --- OBRA · series ------------------------------------------
+     Agrupación propuesta mirando las piezas. Renombrar o
+     reordenar = editar aquí. Mover una pieza = cambiar su
+     campo `serie`.                                              */
+  const SERIES = [
+    { id: 'eclipses', nombre: 'Eclipses', plano: 'plano--tinta',
+      pie: 'Soles tapados, anillos de luz, lo que pasa cuando algo se interpone.' },
+    { id: 'anatomias', nombre: 'Anatomías', plano: 'plano--kinder',
+      pie: 'El cuerpo recortado: un corazón, un ojo, una cara que se comparte.' },
+    { id: 'abstracto', nombre: 'Abstracto', plano: '',
+      pie: 'Geometría plana, tijera limpia, color que no duda.' },
+    { id: 'capas', nombre: 'Capas', plano: 'plano--menta',
+      pie: 'Donde el collage se espesa: transparencias, tramas, cosas debajo de otras.' },
+  ];
+
+  /* --- OBRA · piezas -------------------------------------------
+     `ref` es lo que se dice al reservar: no hay títulos por pieza
+     todavía, así que la referencia la da la serie y el número.
+     Precios: las siete de gran formato a 6000; las diez
+     anteriores conservan el suyo (ProductList Nov 2025).
+     El emparejamiento foto ↔ precio de esas diez está por
+     confirmar con Tatifer.                                       */
+  const PIEZAS = [
+    { img: 'assets/img/obra/nueva-04.jpg', precio: 6000, serie: 'eclipses',
+      alt: 'Collage: una figura infantil frente a un disco negro con corona de luz, entre dos troncos, sobre una roca de estratos de color' },
+    { img: 'assets/img/obra/nueva-05.jpg', precio: 6000, serie: 'eclipses',
+      alt: 'Collage: eclipse sobre una montaña de estratos, con dos figuras clásicas en la cima' },
+    { img: 'assets/img/obra/nueva-03.jpg', precio: 6000, serie: 'eclipses',
+      alt: 'Collage: figura de negro con el pelo rosa, rodeada de llamas y de rayos blancos, con un disco gris al fondo' },
+
+    { img: 'assets/img/obra/nueva-01.jpg', precio: 6000, serie: 'anatomias',
+      alt: 'Collage: un corazón anatómico azul con flores, sobre papel botánico antiguo' },
+    { img: 'assets/img/obra/nueva-00.jpg', precio: 6000, serie: 'anatomias',
+      alt: 'Collage: un ojo grande entre círculos de escamas malva y una forma negra' },
+    { img: 'assets/img/obra/nueva-06.jpg', precio: 6000, serie: 'anatomias',
+      alt: 'Collage: una cara partida con la de un perro, entre tramas malva y lunares magenta' },
+
+    { img: 'assets/img/obra/obra-00.jpg', precio: 950, serie: 'abstracto',
+      alt: 'Collage de papel cortado en azules, lilas y verde menta, con lunares' },
+    { img: 'assets/img/obra/obra-02.jpg', precio: 500, serie: 'abstracto',
+      alt: 'Collage en amarillo y magenta con un gran círculo turquesa de tres lunares' },
+    { img: 'assets/img/obra/obra-03.jpg', precio: 450, serie: 'abstracto',
+      alt: 'Collage de anillos y arcos en verdes y dorado sobre fondo verde' },
+    { img: 'assets/img/obra/obra-04.jpg', precio: 400, serie: 'abstracto',
+      alt: 'Collage en turquesa con una forma naranja texturada y una franja de cebra azul' },
+    { img: 'assets/img/obra/obra-07.jpg', precio: 300, serie: 'abstracto',
+      alt: 'Collage geométrico en azul, amarillo y turquesa con círculos y medias lunas' },
+
+    { img: 'assets/img/obra/nueva-02.jpg', precio: 6000, serie: 'capas',
+      alt: 'Collage: discos negros y siluetas de pájaros sobre magenta y verdes estampados' },
+    { img: 'assets/img/obra/obra-01.jpg', precio: 800, serie: 'capas',
+      alt: 'Collage en azules estampados con un arco y un círculo, sobre papel de flores' },
+    { img: 'assets/img/obra/obra-05.jpg', precio: 350, serie: 'capas',
+      alt: 'Collage con papel manuscrito amarillo, azules estampados y un número 3 recortado' },
+    { img: 'assets/img/obra/obra-06.jpg', precio: 350, serie: 'capas',
+      alt: 'Collage de círculos translúcidos en pastel sobre fondo oscuro' },
+    { img: 'assets/img/obra/obra-08.jpg', precio: 250, serie: 'capas',
+      alt: 'Collage orgánico en turquesa y oliva con formas de vainas y tramas doradas' },
+    { img: 'assets/img/obra/obra-09.jpg', precio: 200, serie: 'capas',
+      alt: 'Collage en negro y naranja con tipografía de prensa invertida' },
+  ];
+
+  // referencia legible por pieza: «Eclipses · 1 de 3»
+  SERIES.forEach(s => {
+    const suyas = PIEZAS.filter(p => p.serie === s.id);
+    suyas.forEach((p, i) => { p.ref = `${s.nombre} · ${i + 1} de ${suyas.length}`; });
+  });
+
+  /* --- CAFÉ ----------------------------------------------------
+     Precios del Dossier_Cafe_La60.pdf, págs. 9 y 10.             */
+  const BLENDS = [
+    { id: 'atelier', nombre: 'Atelier',  perfil: 'Premium · tueste medio' },
+    { id: 'colcoll', nombre: 'Col-Coll', perfil: 'Espresso · 75 % medio + 25 % oscuro' },
+    { id: 'darkneo', nombre: 'Darkneo',  perfil: 'French roast · 100 % oscuro' },
+    { id: 'sereno',  nombre: 'Sereno',   perfil: 'Descafeinado al agua · tueste medio' },
+    { id: 'mes',     nombre: 'Atelier del mes', perfil: 'Café invitado · solo 250 g', solo250: true },
+  ];
+  const GRAMAJES = [
+    { id: '250', etiqueta: '250 g', precio: 150, precioMes: 190 },
+    { id: '500', etiqueta: '500 g', precio: 280 },
+    { id: '1k',  etiqueta: '1 kg',  precio: 560 },
+  ];
+
+  /* --- COMPRA -------------------------------------------------
+     Enlace de pago de cada bolsa. Aquí se pega la URL del checkout
+     de GoHighLevel, una por blend y medida.
+
+     Dónde sacarla en GHL: Payments → Products → el producto →
+     el enlace del checkout (o el de la página de pago que lo use).
+
+     Mientras un hueco siga vacío, ese botón manda el pedido por
+     WhatsApp con el blend y la medida ya escritos: la tienda vende
+     igual desde el primer día, y mejora conforme pegues enlaces.
+     ------------------------------------------------------------ */
+  const COMPRA = {
+    atelier: { '250': '', '500': '', '1k': '' },
+    colcoll: { '250': '', '500': '', '1k': '' },
+    darkneo: { '250': '', '500': '', '1k': '' },
+    sereno:  { '250': '', '500': '', '1k': '' },
+  };
+  const WHATSAPP = '529996226722';
+
+  const MOLIENDAS = ['En grano', 'Espresso', 'Filtro / V60', 'Prensa francesa',
+                     'Moka / greca', 'Aeropress'];
+
+  /* --- TALLER --------------------------------------------------
+     Cuotas de ProductList Nov 2025: «Cuota collage» y
+     «Cuota collages estudiante».                                 */
+  const TALLER = { cuota: 100, cuotaEstudiante: 50 };
+
+  return { SERIES, PIEZAS, BLENDS, GRAMAJES, MOLIENDAS, TALLER, COMPRA, WHATSAPP };
+})();
+
+/* ============================================================
+   LA 60 · CAFÉ ATELIER — comportamiento
+   1. Motor de objetos flotantes (ratón + scroll)
+   2. Revelados al scroll
+   3. Barra que se esconde
+   4. Selector de gramaje
+   5. Bolsas de café en SVG
+   6. Collages de obra en SVG (marcador de posición)
+   7. Objetos de la casa en SVG
+   ============================================================ */
+(() => {
+  'use strict';
+  const $  = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+  const calma = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ==========================================================
+     1 · MOTOR DE OBJETOS FLOTANTES
+     La capa exterior recibe el paralaje; la interior respira
+     sola en CSS. Así nunca se pisan el transform.
+     ========================================================== */
+  const escenas = $$('.escena');
+
+  // -- ratón: cada escena desplaza sus objetos según su profundidad
+  if (!calma && matchMedia('(hover:hover)').matches) {
+    escenas.forEach(esc => {
+      let objetivo = { x: 0, y: 0 }, actual = { x: 0, y: 0 }, animando = false;
+      const amplitud = parseFloat(esc.dataset.raton || 20);
+
+      const suaviza = () => {
+        actual.x += (objetivo.x - actual.x) * 0.075;
+        actual.y += (objetivo.y - actual.y) * 0.075;
+        esc.style.setProperty('--mx', actual.x.toFixed(2) + 'px');
+        esc.style.setProperty('--my', actual.y.toFixed(2) + 'px');
+        if (Math.abs(objetivo.x - actual.x) > 0.1 || Math.abs(objetivo.y - actual.y) > 0.1) {
+          requestAnimationFrame(suaviza);
+        } else { animando = false; }
+      };
+
+      esc.addEventListener('pointermove', e => {
+        const r = esc.getBoundingClientRect();
+        objetivo.x = ((e.clientX - r.left) / r.width  - 0.5) * -2 * amplitud;
+        objetivo.y = ((e.clientY - r.top)  / r.height - 0.5) * -2 * amplitud;
+        if (!animando) { animando = true; requestAnimationFrame(suaviza); }
+      }, { passive: true });
+
+      esc.addEventListener('pointerleave', () => {
+        objetivo.x = 0; objetivo.y = 0;
+        if (!animando) { animando = true; requestAnimationFrame(suaviza); }
+      });
+    });
+  }
+
+  // -- scroll: los objetos se separan en profundidad al avanzar
+  const flotantes = $$('.flota');
+  if (!calma && flotantes.length) {
+    let pendiente = false;
+    const recalcula = () => {
+      const vh = innerHeight;
+      flotantes.forEach(f => {
+        const esc = f.closest('.escena') || f.parentElement;
+        const r = esc.getBoundingClientRect();
+        if (r.bottom < -200 || r.top > vh + 200) return;
+        // -1 → +1 mientras la escena cruza la ventana
+        const p = ((vh - r.top) / (vh + r.height)) * 2 - 1;
+        const rango = parseFloat(f.dataset.scroll || 90);
+        f.style.setProperty('--sy', (p * -rango).toFixed(1) + 'px');
+      });
+      pendiente = false;
+    };
+    addEventListener('scroll', () => {
+      if (!pendiente) { pendiente = true; requestAnimationFrame(recalcula); }
+    }, { passive: true });
+    addEventListener('resize', recalcula, { passive: true });
+    recalcula();
+  }
+
+  /* ==========================================================
+     2 · REVELADOS AL SCROLL
+     ========================================================== */
+  const porRevelar = $$('.rev, .rev-mask');
+  if (porRevelar.length) {
+    const obs = new IntersectionObserver((entradas) => {
+      entradas.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('is-on'); obs.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+    porRevelar.forEach(el => obs.observe(el));
+  }
+
+  /* ==========================================================
+     3 · BARRA QUE SE ESCONDE AL BAJAR
+     ========================================================== */
+  const nav = $('.nav');
+  if (nav) {
+    let ultimo = 0;
+    addEventListener('scroll', () => {
+      const y = scrollY;
+      nav.classList.toggle('is-oculto', y > ultimo && y > 380);
+      ultimo = y;
+    }, { passive: true });
+  }
+
+  /* ==========================================================
+     4 · SELECTOR DE GRAMAJE
+     Precios reales del dossier. «—» donde no hay presentación.
+     ========================================================== */
+  // Las fotos finales, una por blend y medida. Las rutas van COMPLETAS:
+  // si se arman con plantilla, el empaquetador no las encuentra y el
+  // paquete sale sin las de 500 g y 1 kg.
+  const FOTOS = {
+    atelier: { '250': 'assets/img/bolsas/atelier-250.webp',
+               '500': 'assets/img/bolsas/atelier-500.webp',
+               '1k':  'assets/img/bolsas/atelier-1k.webp' },
+    colcoll: { '250': 'assets/img/bolsas/colcoll-250.webp',
+               '500': 'assets/img/bolsas/colcoll-500.webp',
+               '1k':  'assets/img/bolsas/colcoll-1k.webp' },
+    darkneo: { '250': 'assets/img/bolsas/darkneo-250.webp',
+               '500': 'assets/img/bolsas/darkneo-500.webp',
+               '1k':  'assets/img/bolsas/darkneo-1k.webp' },
+    sereno:  { '250': 'assets/img/bolsas/sereno-250.webp',
+               '500': 'assets/img/bolsas/sereno-500.webp',
+               '1k':  'assets/img/bolsas/sereno-1k.webp' },
+  };
+
+
+  /* ==========================================================
+     4b · BOTÓN DE PEDIDO
+     Cada tarjeta apunta al checkout de GoHighLevel de esa bolsa.
+     Si ese hueco de COMPRA sigue vacío, el botón manda el pedido
+     por WhatsApp con el blend y la medida ya escritos.
+     ========================================================== */
+  const { COMPRA = {}, WHATSAPP = '' } = window.LA60 || {};
+
+  function etiquetaMedida(g) { return g === '1k' ? '1 kg' : g + ' g'; }
+
+  function pintaPedido(p, g) {
+    const a = $('.prod__pedir', p);
+    if (!a) return;
+    const blend = p.dataset.blend;
+    const nombre = ($('h3', p) || {}).textContent || blend;
+    const url = (COMPRA[blend] || {})[g];
+    if (url) {
+      a.href = url;
+      a.removeAttribute('target');
+      $('span', a).textContent = 'Comprar';
+    } else if (WHATSAPP) {
+      const txt = `Hola LA 60, quiero pedir ${nombre} de ${etiquetaMedida(g)}.`;
+      a.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(txt)}`;
+      a.target = '_blank'; a.rel = 'noopener';
+      $('span', a).textContent = 'Pedir por WhatsApp';
+    }
+    a.setAttribute('aria-label', `Pedir ${nombre} de ${etiquetaMedida(g)}`);
+  }
+
+  // estado inicial: la tienda abre en 250 g
+  $$('.prod').forEach(p => pintaPedido(p, '250'));
+
+  const gramaje = $('.gramaje');
+  if (gramaje) {
+    gramaje.addEventListener('click', e => {
+      const b = e.target.closest('button');
+      if (!b) return;
+      $$('button', gramaje).forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+      const g = b.dataset.g;
+      $$('.prod').forEach(p => {
+        const precio = p.dataset['p' + g];
+        const cont = $('.prod__precio', p);
+        const et   = $('.prod__g', p);
+        if (precio) {
+          cont.textContent = '$' + precio;
+          cont.classList.remove('prod__precio--na');
+        } else {
+          cont.textContent = 'solo 250 g';
+          cont.classList.add('prod__precio--na');
+        }
+        et.textContent = g === '1k' ? '1 kg' : g + ' g';
+
+        // y la foto: hay una por blend y medida, con la misma luz en las tres
+        const blend = p.dataset.blend, foto = $('.prod__lienzo img', p);
+        const ruta = FOTOS[blend] && FOTOS[blend][g];
+        if (foto && ruta) {
+          foto.src = ruta;
+          foto.alt = foto.alt.replace(/de \d+ ?g|de 1 kg/, g === '1k' ? 'de 1 kg' : `de ${g} g`);
+        }
+
+        pintaPedido(p, g);
+      });
+    });
+  }
+
+  /* ==========================================================
+     5 · DATOS DE LOS BLENDS
+     Las bolsas ya no se dibujan: son los renders reales
+     (assets/img/bolsas/), puestos directos en el HTML. Aquí solo
+     quedan los datos que necesita el frontal de respaldo.
+     ========================================================== */
+  const BLENDS = {
+    atelier: {
+      nombre: 'Atelier', fondo: '#0E7C74', tacha: '#008D89',
+      etiquetaTueste: 'TUESTE: MEDIO', notas: ['NOTAS: CHOCOLATE OSCURO'],
+    },
+    colcoll: {
+      nombre: 'Col-Coll', fondo: '#C6E6DC', tacha: '#008D89',
+      etiquetaTueste: 'TUESTE: 75 % MEDIO 25 % OSCURO',
+      notas: ['NOTAS: CHOCOLATE AMARGO', 'MELAZA · ESPECIADO'],
+    },
+    darkneo: {
+      nombre: 'Darkneo', fondo: '#C9A87C', tacha: '#E31E24',
+      etiquetaTueste: 'TUESTE: OSCURO (FRENCH)',
+      notas: ['NOTAS: CACAO · CARAMELO · MADERA'],
+    },
+    sereno: {
+      nombre: 'Sereno', fondo: '#EFE7DA', tacha: '#006D6A', bajo: 'DESCAFEINADO',
+      etiquetaTueste: 'TUESTE: MEDIO',
+      notas: ['NOTAS: PILONCILLO · MANZANA', 'ROJA · ALMENDRA TOSTADA'],
+    },
+  };
+
+  // Las cuatro etiquetas originales, tal como salieron de imprenta
+  // (convertidas de CMYK a sRGB, sin recortar ni recolorear).
+  const ETIQUETAS = {
+    atelier: 'assets/img/etiquetas/atelier.jpg',
+    colcoll: 'assets/img/etiquetas/col-coll.jpg',
+    darkneo: 'assets/img/etiquetas/darkneo.jpg',
+    sereno:  'assets/img/etiquetas/sereno.jpg',
+  };
+
+  /* ==========================================================
+     6 · VOCABULARIO DE COLLAGE
+     Papel rasgado, tramas de puntos, anillos y franjas: el mismo
+     lenguaje de las etiquetas de los blends, hecho en SVG.
+     Sirve para el hueco de las fichas de obra y para el frontal
+     provisional de cada blend, hasta que lleguen las fotos. Los
+     objetos que flotan ya no son generados: son los recortes de la
+     manteleta, en assets/img/recortes/.
+     Todo determinista por semilla: la misma pieza sale igual
+     en cada carga.
+     ========================================================== */
+
+  // Paleta leída de las etiquetas reales, no de la pantalla.
+  const PAPEL = {
+    verde:  '#0E7C74', menta: '#A7D6CE', mentaClara: '#C6E6DC',
+    rosa:   '#F79AB0', rojo:  '#E31E24', mostaza: '#E0A22B',
+    crema:  '#EFE7DA', kraft: '#C9A87C', kraftOsc: '#AC8A5F',
+    tinta:  '#2E2E2E', hueso: '#F5EFE4',
+  };
+  const KINDER = '#008D89';   // el kinder del logo: tachadura y caja del 393
+  const COLORES = [PAPEL.verde, PAPEL.menta, PAPEL.rosa, PAPEL.rojo, PAPEL.mostaza, PAPEL.crema, PAPEL.tinta];
+  // La menta queda fuera de los fondos: el hero ya es mentolado y las
+  // figuras se perdían contra él. Kraft, crema, verde y rosa recortan.
+  const FONDOS  = [PAPEL.kraft, PAPEL.crema, PAPEL.verde, PAPEL.hueso, PAPEL.rosa, PAPEL.kraftOsc];
+
+  function azar(semilla) {           // PRNG determinista (mulberry32)
+    let a = semilla >>> 0;
+    return () => {
+      a = (a + 0x6D2B79F5) >>> 0;
+      let t = Math.imul(a ^ (a >>> 15), 1 | a);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+
+  // Contorno de papel rasgado: el perímetro de un rectángulo recorrido
+  // a pasos irregulares, con la orilla temblando. Es lo que separa un
+  // recorte de una caja de color.
+  function rasgado(x, y, w, h, r, amp = 4.5) {
+    const p = [], j = () => (r() - 0.5) * 2 * amp, paso = () => 7 + r() * 11;
+    for (let v = x; v < x + w; v += paso()) p.push([v, y + j()]);
+    p.push([x + w, y + j()]);
+    for (let v = y; v < y + h; v += paso()) p.push([x + w + j(), v]);
+    p.push([x + w + j(), y + h]);
+    for (let v = x + w; v > x; v -= paso()) p.push([v, y + h + j()]);
+    p.push([x, y + h + j()]);
+    for (let v = y + h; v > y; v -= paso()) p.push([x + j(), v]);
+    return 'M' + p.map(c => c[0].toFixed(1) + ' ' + c[1].toFixed(1)).join('L') + 'Z';
+  }
+
+  // --- motivos sueltos -------------------------------------------------
+  const motivo = {
+    puntos(x, y, w, h, c, r) {           // trama de lunares
+      const paso = 13 + r() * 9, rad = paso * (0.2 + r() * 0.12);
+      let o = '';
+      for (let py = y + paso / 2; py < y + h; py += paso)
+        for (let px = x + paso / 2; px < x + w; px += paso)
+          o += `<circle cx="${px.toFixed(1)}" cy="${py.toFixed(1)}" r="${rad.toFixed(1)}" fill="${c}"/>`;
+      return o;
+    },
+    franjas(x, y, w, h, c, r) {          // bandas, como el papel de rayas
+      const n = 4 + Math.floor(r() * 4), a = w / n;
+      let o = '';
+      for (let i = 0; i < n; i++)
+        o += `<rect x="${(x + a * i).toFixed(1)}" y="${y.toFixed(1)}" width="${(a * 0.52).toFixed(1)}" height="${h.toFixed(1)}" fill="${c}"/>`;
+      return o;
+    },
+    anillo(x, y, w, h, c, r) {
+      const rad = Math.min(w, h) / 2;
+      return `<circle cx="${(x + w / 2).toFixed(1)}" cy="${(y + h / 2).toFixed(1)}" r="${rad.toFixed(1)}"
+              fill="none" stroke="${c}" stroke-width="${(rad * (0.3 + r() * 0.2)).toFixed(1)}"/>`;
+    },
+    disco(x, y, w, h, c) {
+      const rad = Math.min(w, h) / 2;
+      return `<circle cx="${(x + w / 2).toFixed(1)}" cy="${(y + h / 2).toFixed(1)}" r="${rad.toFixed(1)}" fill="${c}"/>`;
+    },
+    media(x, y, w, h, c, r) {            // medio círculo, muy suyo de las etiquetas
+      const rad = Math.min(w, h) / 2, cx = x + w / 2, cy = y + h / 2;
+      const g = Math.floor(r() * 4) * 90;
+      return `<path d="M${(cx - rad).toFixed(1)} ${cy.toFixed(1)} a${rad.toFixed(1)} ${rad.toFixed(1)} 0 0 1 ${(rad * 2).toFixed(1)} 0 Z"
+              fill="${c}" transform="rotate(${g} ${cx.toFixed(1)} ${cy.toFixed(1)})"/>`;
+    },
+    perforado(x, y, w, h, c, r) {        // la columna de agujeros troquelados
+      const paso = 15 + r() * 8;
+      let o = `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${w.toFixed(1)}" height="${h.toFixed(1)}" fill="${c}"/>`;
+      for (let py = y + paso * 0.7; py < y + h - paso * 0.3; py += paso)
+        for (let px = x + paso * 0.7; px < x + w - paso * 0.3; px += paso)
+          o += `<circle cx="${px.toFixed(1)}" cy="${py.toFixed(1)}" r="${(paso * 0.26).toFixed(1)}" fill="#FCF7F2" opacity=".92"/>`;
+      return o;
+    },
+  };
+  motivo.campo = (x, y, w, h, c, r) =>            // recorte de color, a secas
+    `<path d="${rasgado(x, y, w, h, r, 5)}" fill="${c}"/>`;
+
+  // Reparto con peso: el collage real es sobre todo campos de color y
+  // medias lunas. Las tramas de puntos aparecen, pero no manda una sola.
+  const REPARTO = [
+    ['campo', 30], ['media', 16], ['anillo', 15], ['franjas', 13],
+    ['disco', 12], ['puntos', 10], ['perforado', 4],
+  ];
+  const TOTAL = REPARTO.reduce((a, [, p]) => a + p, 0);
+  const sorteaMotivo = r => {
+    let n = r() * TOTAL;
+    for (const [nombre, peso] of REPARTO) { n -= peso; if (n <= 0) return nombre; }
+    return 'campo';
+  };
+
+  /* ==========================================================
+     6b · FRONTAL DE ETIQUETA
+     Es lo que abre la ficha técnica de cada blend. Si el JPG real
+     está en assets/img/etiquetas/, se muestra ese, entero y sin
+     recortar. Si no, se dibuja un frontal con la misma estructura
+     que las etiquetas reales: cinta de arriba, escudo del logo,
+     banda con el nombre, tueste y notas de cata.
+     Va después del vocabulario de collage porque lo usa.
+     ========================================================== */
+  function frontalVector(d) {
+    const r = azar(d.nombre.split('').reduce((a, c) => a + c.charCodeAt(0), 11) * 977);
+    const pick = a => a[Math.floor(r() * a.length)];
+    const W = 590, H = 500;
+    const fondo = d.fondo || PAPEL.kraft;
+    const claro = ['#EFE7DA', '#C6E6DC', '#C9A87C', '#F5EFE4'].includes(fondo);
+    let o = `<path d="${rasgado(0, 0, W, H, r, 6)}" fill="${PAPEL.hueso}"/>`
+          + `<path d="${rasgado(15, 15, W - 30, H - 30, r, 5)}" fill="${fondo}"/>`;
+
+    // dos recortes de collage, uno a cada lado, detrás de todo lo demás
+    [[6, 160, 240, 290], [W - 216, H - 250, 250, 235]].forEach(([x, y, w, h]) => {
+      let c = pick([PAPEL.rosa, PAPEL.rojo, PAPEL.mostaza, PAPEL.verde, PAPEL.menta]);
+      if (c === fondo) c = PAPEL.mostaza;
+      o += `<g transform="rotate(${(r() * 16 - 8).toFixed(1)} ${x + w / 2} ${y + h / 2})" opacity=".95">
+              ${motivo[sorteaMotivo(r)](x, y, w, h, c, r)}</g>`;
+    });
+
+    // banda de papel rasgado con texto centrado, el gesto base de la etiqueta
+    const banda = (x, y, w, h, txt, size, largo, relleno = PAPEL.hueso, color = PAPEL.tinta, peso = 400) =>
+      `<g transform="rotate(${(r() * 2.6 - 1.3).toFixed(1)} ${(x + w / 2).toFixed(1)} ${(y + h / 2).toFixed(1)})">
+         <path d="${rasgado(x, y, w, h, r, 3.2)}" fill="${relleno}"/>
+         <text x="${(x + w / 2).toFixed(1)}" y="${(y + h / 2 + size * 0.35).toFixed(1)}" text-anchor="middle"
+               font-family="'Warung Kopi',sans-serif" font-size="${size}" font-weight="${peso}"
+               letter-spacing="1.2" textLength="${largo}" lengthAdjust="spacing"
+               fill="${color}">${txt}</text>
+       </g>`;
+
+    // cinta de arriba
+    o += banda(42, 26, 330, 46, 'CAFÉ ORGÁNICO MEXICANO 100% ARÁBICA', 15, 290, '#E4E0D8');
+
+    // escudo del logo, arriba a la derecha: el logotipo original, sin dibujar
+    o += `<g transform="rotate(1.4 490 100)">
+      <path d="${rasgado(414, 26, 152, 148, r, 4.5)}" fill="${PAPEL.hueso}"/>
+      <image href="https://archivos.la60cafeatelier.com/assets/img/logo-tinta.webp" x="446" y="40" width="88" height="120"/>
+    </g>`;
+
+    // banda del nombre — la pieza que manda
+    const nom = d.nombre.toUpperCase();
+    o += `<g transform="rotate(-1.1 292 250)">
+      <path d="${rasgado(52, 186, 452, 128, r, 5.5)}" fill="${PAPEL.hueso}"/>
+      <text x="278" y="278" text-anchor="middle" font-family="'LORE Display','LORE',cursive"
+            font-size="86" textLength="${Math.min(400, nom.length * 52)}" lengthAdjust="spacingAndGlyphs"
+            fill="${PAPEL.tinta}">${nom}</text>
+    </g>`;
+
+    // subtítulo subrayado, como el «DESCAFEINADO» de Sereno
+    if (d.bajo) {
+      o += `<g transform="rotate(-1.1 292 250)">
+        <rect x="300" y="296" width="150" height="15" fill="${PAPEL.mostaza}"/>
+        <text x="375" y="309" text-anchor="middle" font-family="'Warung Kopi',sans-serif"
+              font-size="17" font-weight="700" letter-spacing="1.6" textLength="140"
+              lengthAdjust="spacing" fill="${PAPEL.tinta}">${d.bajo}</text>
+      </g>`;
+    }
+
+    // tueste abajo a la izquierda
+    const t = d.etiquetaTueste || '';
+    o += banda(46, 392, Math.min(250, 66 + t.length * 8.4), 56, t, 16,
+               Math.min(214, t.length * 8.2));
+
+    // notas abajo a la derecha, una o dos líneas
+    const notas = d.notas || [];
+    if (notas.length) {
+      const ancho = 264, alto = 34 + notas.length * 26;
+      const x = W - ancho - 40, y = H - alto - 34;
+      o += `<g transform="rotate(1.2 ${x + ancho / 2} ${y + alto / 2})">
+        <path d="${rasgado(x, y, ancho, alto, r, 3.4)}" fill="${PAPEL.hueso}"/>
+        ${notas.map((n, i) => `<text x="${x + ancho / 2}" y="${y + 30 + i * 26}" text-anchor="middle"
+            font-family="'Warung Kopi',sans-serif" font-size="15" letter-spacing="1"
+            textLength="${Math.min(ancho - 34, n.length * 8)}" lengthAdjust="spacing"
+            fill="${PAPEL.tinta}">${n}</text>`).join('')}
+      </g>`;
+    }
+
+    return `<svg viewBox="0 0 ${W} ${H}" role="img"
+            aria-label="Frontal de la etiqueta de ${d.nombre}">${o}</svg>`;
+  }
+
+  const pintaFrontal = (clave, foto) => {
+    const d = BLENDS[clave];
+    if (!d) return;
+    const html = foto
+      ? `<img src="${foto}" alt="Etiqueta de ${d.nombre}, collage de Tatifer4" loading="lazy">`
+      : frontalVector(d);
+    $$(`[data-frontal="${clave}"]`).forEach(el => { el.innerHTML = html; });
+  };
+
+  Object.keys(BLENDS).forEach(clave => {
+    pintaFrontal(clave);
+    const ruta = ETIQUETAS[clave];
+    if (!ruta) return;
+    const prueba = new Image();
+    prueba.onload = () => pintaFrontal(clave, ruta);
+    prueba.src = ruta;
+  });
+
+  /* ==========================================================
+     7 · OBJETOS DE LA CASA
+     ========================================================== */
+  const OBJETOS = {
+    taza: `<svg viewBox="0 0 120 120" role="presentation">
+      <path d="M22 40h62v38a26 26 0 0 1-26 26H48a26 26 0 0 1-26-26Z" fill="#FCF7F2" stroke="#3A3A3A" stroke-width="4"/>
+      <path d="M84 52h10a15 15 0 0 1 0 30h-10" fill="none" stroke="#3A3A3A" stroke-width="4"/>
+      <circle cx="42" cy="62" r="5" fill="#E88FA8"/><circle cx="64" cy="62" r="5" fill="#E88FA8"/>
+      <path d="M46 78q7 7 14 0" fill="none" stroke="#E31E24" stroke-width="4" stroke-linecap="round"/>
+      <path d="M40 30c0-8 8-8 8-16M60 30c0-8 8-8 8-16" fill="none" stroke="#008D89" stroke-width="3.4" stroke-linecap="round"/>
+    </svg>`,
+    pin: `<svg viewBox="0 0 120 120" role="presentation">
+      <circle cx="60" cy="60" r="38" fill="#008D89"/>
+      <path d="M32 60h56M60 32v56" stroke="#FCF7F2" stroke-width="0"/>
+      <rect x="38" y="38" width="26" height="26" fill="#E31E24"/>
+      <path d="M64 82 78 56l14 26Z" fill="#C89B2E"/>
+      <circle cx="46" cy="76" r="10" fill="#A7D6CE"/>
+      <circle cx="60" cy="60" r="38" fill="none" stroke="#3A3A3A" stroke-width="4"/>
+    </svg>`,
+    postal: `<svg viewBox="0 0 120 120" role="presentation">
+      <rect x="14" y="28" width="92" height="64" rx="3" fill="#FCF7F2" stroke="#3A3A3A" stroke-width="4"/>
+      <rect x="22" y="36" width="40" height="48" fill="#C2185B"/>
+      <path d="M22 84 42 56l20 28Z" fill="#C89B2E"/>
+      <circle cx="34" cy="48" r="6" fill="#FCF7F2"/>
+      <path d="M70 46h28M70 58h28M70 70h18" stroke="#3A3A3A" stroke-width="3.4" stroke-linecap="round"/>
+    </svg>`,
+    libreta: `<svg viewBox="0 0 120 120" role="presentation">
+      <rect x="26" y="18" width="70" height="86" rx="3" fill="#C89B2E" stroke="#3A3A3A" stroke-width="4"/>
+      <rect x="38" y="34" width="46" height="34" fill="#A7D6CE"/>
+      <path d="M38 68 56 44l16 24Z" fill="#E31E24"/>
+      <path d="M38 82h46M38 92h30" stroke="#3A3A3A" stroke-width="3.4" stroke-linecap="round"/>
+      <path d="M26 26h-8M26 46h-8M26 66h-8M26 86h-8" stroke="#3A3A3A" stroke-width="4" stroke-linecap="round"/>
+    </svg>`,
+  };
+  $$('[data-objeto]').forEach(el => { el.innerHTML = OBJETOS[el.dataset.objeto] || ''; });
+
+  /* ==========================================================
+     8 · AÑO EN EL PIE
+     ========================================================== */
+  const anio = $('[data-anio]');
+  if (anio) anio.textContent = new Date().getFullYear();
+})();
+
+</script>

@@ -1,0 +1,27 @@
+<!-- ══════════════════════════════════════════════════════════════
+     LA 60 · CAFÉ ATELIER — la otra salida, en diez líneas.
+
+     En vez de traducir el sitio, GHL sólo le abre una ventana. Lo
+     que se ve es la página de verdad, servida desde el hosting, así
+     que no hay nada que pueda traducirse mal: ni el sticky, ni las
+     tipografías, ni el motor de objetos flotantes.
+
+     Cambia la URL por la tuya antes de pegar.
+     ══════════════════════════════════════════════════════════════ -->
+<style>
+  #la60-marco{
+    margin-left: calc(50% - 50vw);
+    width: 100vw; max-width: 100vw;
+    height: 100svh; border: 0; display: block;
+  }
+  /* En iOS el iframe no hereda el scroll del padre; esto lo arregla. */
+  @supports (-webkit-touch-callout: none){
+    #la60-marco{ -webkit-overflow-scrolling: touch; }
+  }
+</style>
+
+<iframe id="la60-marco"
+        src="https://sitio.la60cafeatelier.com/"
+        title="LA 60 · Café Atelier"
+        loading="eager"
+        referrerpolicy="same-origin"></iframe>
